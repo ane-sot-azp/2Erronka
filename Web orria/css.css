@@ -1,0 +1,752 @@
+/*Orokorra*/
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body {
+    font-size: 20px;
+    text-align: justify;
+}
+
+p,
+li,
+h4 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+h1,
+header {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+h3 {
+    color: white;
+}
+
+h2 {
+    border-bottom: 15px solid #272D65;
+    text-indent: 40px;
+}
+
+/*Nabigatzailea*/
+
+div.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+input[type=search]{
+    height: 20px;
+    font-size: 16px;
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.active {
+    background-color: #272D65;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #2A4698;
+    height: 2.3em;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+    background-color: #273684;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 2.3em;
+    background-color: #273684;
+    width: 100%;
+    z-index: 1;
+}
+
+.subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.subnav-content a:hover {
+    background-color: #272D65;
+    color: white;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+.hizkuntza>img {
+    width: 20px;
+    vertical-align: middle;
+}
+
+
+div .active {
+    background-color: #272D65;
+}
+
+.btnAbrirlehioa {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.btnAbrirlehioa:hover {
+    background-color: #0056b3;
+}
+
+.lehioa {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.lehioa:target {
+    display: flex;
+}
+
+.lehioa-contenido {
+    position: relative;
+    background-color: #272D65;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    padding: 80px;
+}
+
+.sesioHasiera {
+    width: 100%;
+}
+
+.itxi {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+}
+
+.itxi:hover {
+    color: black;
+}
+
+/*Footerra*/
+div.footer{
+    position: sticky;
+}
+div.footerra{
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-template-areas: 
+    'logo helb'
+    'logo mail'
+    'logo tel';
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    background-color: #272D65;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 5px;
+}
+.footlogo{grid-area: logo;}
+.footmail{grid-area: mail;}
+.foottel{grid-area: tel;}
+.foothelb{grid-area: helb;}
+.footrights{grid-area: rights;}
+div.footerra>div{
+    padding: 10px;
+}
+.footleft{
+    text-align: left;
+}
+div.footrights{
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    background-color: #272D65;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+/*Hasiera*/
+
+.logo {
+    align-items: center;
+    margin: 5px;
+}
+
+.deskontuak {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+div.produktuak>h1 {
+    font-size: 40px;
+    background-color: #2a4698;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin: 0;
+
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 10px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 8px;
+    text-align: center;
+}
+
+.deskribapena {
+    text-align: center;
+
+}
+
+.imagen {
+    text-align: center;
+}
+
+.imagenes>div>a.irudiak>img {
+    width: auto;
+    height: 250px;
+    box-shadow: 0px 0px 5px lightgray;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.albisteak {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-areas:
+        'izenburua1 izenburua1 izenburua1'
+        'laburpena1 laburpena1 laburpena1'
+        'albisteIrudia1 albistea1 albistea1'
+        'izenburua2 izenburua2 izenburua2'
+        'laburpena2 laburpena2 laburpena2'
+        'albistea2 albistea2 albisteIrudia2';
+    gap: 2.5%;
+    margin: 5%;
+    justify-content: center;
+}
+
+.albisteIrudia1 {
+    grid-area: albisteIrudia1;
+}
+
+.albisteIrudia1,
+.albisteIrudia2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.izenburua1 {
+    grid-area: izenburua1;
+}
+
+.laburpena1 {
+    grid-area: laburpena1;
+}
+
+.albistea1 {
+    grid-area: albistea1;
+}
+
+.albisteIrudia2 {
+    grid-area: albisteIrudia2;
+}
+
+.izenburua2 {
+    grid-area: izenburua2;
+}
+
+.laburpena2 {
+    grid-area: laburpena2;
+}
+
+.albistea2 {
+    grid-area: albistea2;
+}
+
+/*Produktuak saldu*/
+h2#formularioa {
+    font-size: 20px;
+    border-bottom: 15px solid #272D65;
+    text-indent: 0;
+}
+
+.formularioa {
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-template-areas: 'produktua hornitzailea';
+    margin: 2%;
+    margin-top: 1%;
+    gap: 3%;
+    padding: 10px;
+}
+
+select#mota {
+    width: 200px;
+    height: 28px;
+    font-size: 16px;
+    padding: 2px;
+}
+
+input {
+    width: 100%;
+}
+
+input[type=color] {
+    width: 100px;
+    height: 40px;
+}
+
+
+.produktua {
+    grid-area: produktua;
+}
+
+.hornitzailea {
+    grid-area: hornitzailea;
+}
+
+.produktua {
+    position: relative;
+    box-sizing: border-box;
+    border: 5px solid #272D65;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    height: 100%;
+
+}
+
+.hornitzailea {
+    position: relative;
+    box-sizing: border-box;
+    border: 5px solid #272D65;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    height: 500px;
+    z-index: 1;
+}
+
+input.botoiak1 {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    background-color: #272D65;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/*Kontaktua*/
+
+.kontaktua {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        'mapa infoForm'
+        'helbidea infoForm';
+    gap: 40px;
+    row-gap: 10px;
+    padding: 40px;
+}
+
+.mapa {
+    width: 100%;
+    height: 300px;
+    grid-area: mapa;
+    margin-top: 10px;
+}
+.helbidea{
+ grid-area: helbidea;
+}
+div.helbidea> div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.required {
+    color: red;
+    vertical-align: middle;
+    font-size: 1.2em;
+    margin-left: 6px;
+}
+
+.infoForm {
+    height: 500px;
+    padding: 20px;
+    grid-area: infoForm;
+}
+
+input {
+    font-size: 18px;
+}
+
+input.kont {
+    width: 100%;
+}
+
+textarea.kont {
+    width: 100%;
+    height: 100px;
+    font-size: 18px;
+}
+
+input.botoiak {
+    width: 48%;
+    margin: 1%;
+    background-color: #272D65;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/*Nor gara*/
+.historiaIzenb {
+    grid-area: h2Historia;
+}
+
+.helburuakIzenb {
+    grid-area: h2Helburuak;
+}
+
+.hisIrudia {
+    grid-area: hisIrudia;
+}
+
+.helIrudia {
+    grid-area: helIrudia;
+}
+
+.historia {
+    grid-area: pHistoria;
+}
+
+.helburuak {
+    grid-area: pHelburuak;
+}
+
+div.norGara {
+    display: grid;
+    grid-template-areas:
+        'h2Historia h2Historia h2Historia'
+        'hisIrudia pHistoria pHistoria'
+        'h2Helburuak h2Helburuak h2Helburuak'
+        'pHelburuak pHelburuak helIrudia';
+    align-items: center;
+}
+
+.norGaraIrudiak {
+    max-width: 100%;
+    padding: 30px;
+    align-items: center;
+}
+
+.helburuak,
+.historia {
+    padding: 10px;
+}
+
+p.helburuak,
+p.historia {
+    text-align: left;
+}
+
+h2.historia,
+h2.helburuak {
+    border-bottom: 30px solid #272D65;
+    text-indent: 40px;
+}
+
+p.helburuak::first-letter, p.historia::first-letter {
+    font-size: 150%;
+    color: #272D65;
+}
+
+/*KATALOGOA*/
+div.general img {
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+div.general {
+    display: grid;
+    grid-template-columns: 24% 24% 24% 24%;
+    grid-template-areas: 'sidebar produktua1 produktua2 produktua3'
+        'sidebar produktua4 produktua5 produktua6'
+        'sidebar produktua7 produktua8 produktua9';
+    gap: 1%;
+    border-radius: 10px;
+    margin: 2%;
+}
+div.general>div>p{
+    font-size: 16px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.produktua1 {
+    grid-area: produktua1;
+}
+
+.produktua2 {
+    grid-area: produktua2;
+}
+
+.produktua3 {
+    grid-area: produktua3;
+}
+
+.produktua4 {
+    grid-area: produktua4;
+}
+
+.produktua5 {
+    grid-area: produktua5;
+}
+
+.produktua6 {
+    grid-area: produktua6;
+}
+
+.produktua7 {
+    grid-area: produktua7;
+}
+
+.produktua8 {
+    grid-area: produktua8;
+}
+
+.produktua9 {
+    grid-area: produktua9;
+}
+
+
+
+div>#produktua1,
+#produktua2,
+#produktua3,
+#produktua4,
+#produktua5,
+#produktua6,
+#produktua7,
+#produktua8,
+#produktua9 {
+    box-sizing: border-box;
+    border: 3px solid #273684;
+    width: 100%;
+    height: 400px;
+    justify-items: center;
+    border-radius: 10px;
+
+}
+
+#argazkia {
+    box-shadow: 0px 0px 5px lightgray;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+div.general div:hover {
+    background-color: #273684;
+    color: white;
+}
+
+
+
+div.general div.sidebar {
+    background-color: #273684;
+    border-radius: 10px;
+    color: white;
+    padding-top: 10px;
+}
+
+h3.pm {
+    display: inline-block;
+    font-size: 21px;
+}
+
+input#ezabatu {
+    bottom: 10px;
+    margin: 5px;
+    margin-left: 15px;
+    width: 90%;
+    background-color: white;
+    color: #272D65;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input#ezabatu:hover {
+    background-color: #727ce0;
+    color: white;
+}
+
+ul.prod {
+    list-style-type: none;
+    padding-right: 30px;
+    padding: 5px;
+}
+
+input[type=checkbox] {
+    width: auto;
+}
+
+.accordion-container {
+    width: 100%;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #020307;
+    box-shadow: 0px 0px 5px #020307;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.accordion-item input[type="checkbox"].check {
+    display: none;
+}
+
+.accordion-title {
+
+    background-color: #273684;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.accordion-title::after {
+    content: "▼";
+    font-size: 14px;
+    transition: transform 1s;
+}
+
+.accordion-item input[type="checkbox"]:checked+.accordion-title::after {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+    background-color: #273684;
+    padding: 0 15px;
+}
+
+.accordion-item input[type="checkbox"]:checked~.accordion-content {
+    max-height: 200px;
+    padding: 15px;
+}
