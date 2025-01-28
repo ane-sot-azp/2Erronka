@@ -8,11 +8,11 @@ import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Hornitzaile {
+public class Hornitzailea {
 
 	// EZAUGARRIAK
 	private int id;
-	private String nan;
+	private String nif;
 	private String izena;
 	private String telefonoa;
 	private String email;
@@ -25,14 +25,14 @@ public class Hornitzaile {
 	private static final String PASAHITZA = "1erronka";
 
 	// SORTZAILEAK(CONSTRUCTORES)
-	public Hornitzaile() {
+	public Hornitzailea() {
 	}	
 	
-	public Hornitzaile(int id, String nan, String izena, String telefonoa, String email, String helbidea,
+	public Hornitzailea(int id, String nif, String izena, String telefonoa, String email, String helbidea,
 			String herria, String postakodea) {
 		super();
 		this.id = id;
-		this.nan = nan;
+		this.nif = nif;
 		this.izena = izena;
 		this.telefonoa = telefonoa;
 		this.email = email;
@@ -54,12 +54,12 @@ public class Hornitzaile {
 		this.id = id;
 	}
 
-	public String getNan() {
-		return nan;
+	public String getNif() {
+		return nif;
 	}
 
-	public void setNan(String nan) {
-		this.nan = nan;
+	public void setNif(String nan) {
+		this.nif = nif;
 	}
 
 	public String getIzena() {
@@ -116,7 +116,7 @@ public class Hornitzaile {
 
 	@Override
 	public String toString() {
-		return "Hornitzaileak [id=" + id + ", nan=" + nan + ", izena=" + izena + ", telefonoa=" + telefonoa + ", email="
+		return "Hornitzaileak [id=" + id + ", nif=" + nif + ", izena=" + izena + ", telefonoa=" + telefonoa + ", email="
 				+ email + ", helbidea=" + helbidea + ", herria=" + herria + ", postakodea=" + postakodea + "]";
 	}
 	
@@ -126,7 +126,7 @@ public class Hornitzaile {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(email, helbidea, herria, id, izena, nan, postakodea, telefonoa);
+		return Objects.hash(email, helbidea, herria, id, izena, nif, postakodea, telefonoa);
 	}
 
 	@Override
@@ -137,16 +137,16 @@ public class Hornitzaile {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Hornitzaile other = (Hornitzaile) obj;
+		Hornitzailea other = (Hornitzailea) obj;
 		return Objects.equals(email, other.email) && Objects.equals(helbidea, other.helbidea)
 				&& Objects.equals(herria, other.herria) && id == other.id && Objects.equals(izena, other.izena)
-				&& Objects.equals(nan, other.nan) && Objects.equals(postakodea, other.postakodea)
+				&& Objects.equals(nif, other.nif) && Objects.equals(postakodea, other.postakodea)
 				&& Objects.equals(telefonoa, other.telefonoa);
 	}
 
 	// METODOAK
 	// Imprimitu metodoa, produktuen datu guztiak ematen dituena.
-	public void hornitzaileakErakutsi() {
+	public void hornitzailearenDatuakIkusi() {
 		String kontsulta = "SELECT * FROM hornitzaileak LIMIT ? OFFSET ?";
 		int limit = 5;
 		int offset = 0;
@@ -167,7 +167,7 @@ public class Hornitzaile {
 
 						while (erantzuna.next()) {
 							int id = erantzuna.getInt("id");
-							String nan = erantzuna.getString("nifedocif");
+							String nif = erantzuna.getString("nifedocif");
 							String izena = erantzuna.getString("izena");
 							String telefonoa = erantzuna.getString("telefonozenbakia");
 							String email = erantzuna.getString("postaelektronikoa");
@@ -176,7 +176,7 @@ public class Hornitzaile {
 							String postakodea = erantzuna.getString("postakodea");
 							
 							
-							System.out.println("ID: " + id + "| NIF-a: " + nan + "| Izena: " + izena  + "| Telefonoa: " + telefonoa + "| Posta elektronikoa: " + email
+							System.out.println("ID: " + id + "| NIF-a: " + nif + "| Izena: " + izena  + "| Telefonoa: " + telefonoa + "| Posta elektronikoa: " + email
 									+ "| Helbidea: " + helbidea + "| Posta kodea: " + postakodea );
 						}
 					}
@@ -194,6 +194,12 @@ public class Hornitzaile {
 			System.out.println("Zerbaitek ez du funtzionatu.");
 		}
 
+	}
+	public void hornitzailearenDatuakEguneratu() {
+		
+	}
+	public void hornitzaileaEzabatu() {
+		
 	}
 
 }

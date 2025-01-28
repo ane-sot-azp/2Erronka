@@ -20,7 +20,7 @@ public class Bezeroa {
 	private String helbidea;
 	private String herria;
 	private String postakodea;
-	private boolean aktiboa;
+	private String pasahitza;
 	
 	private static final String URL = "jdbc:mysql://172.16.242.107:3306/1.erronka";
 	private static final String ERABILTZAILEA = "administratzailea";
@@ -32,7 +32,7 @@ public class Bezeroa {
 
 	
 	public Bezeroa(int id, String nan, String izena, String abizena, String telefonoa, String email, String helbidea,
-			String herria, String postakodea, boolean aktiboa) {
+			String herria, String postakodea, String pasahitza) {
 		super();
 		this.id = id;
 		this.nan = nan;
@@ -43,7 +43,7 @@ public class Bezeroa {
 		this.helbidea = helbidea;
 		this.herria = herria;
 		this.postakodea = postakodea;
-		this.aktiboa = aktiboa;
+		this.pasahitza = pasahitza;
 	}
 
 
@@ -139,26 +139,24 @@ public class Bezeroa {
 	public void setPostakodea(String postakodea) {
 		this.postakodea = postakodea;
 	}
-
-
-	public boolean isAktiboa() {
-		return aktiboa;
+	
+	public String getPasahitza() {
+		return pasahitza;
 	}
 
 
-	public void setAktiboa(boolean aktiboa) {
-		this.aktiboa = aktiboa;
+	public void setPasahitza(String pasahitza) {
+		this.pasahitza = pasahitza;
 	}
 
 
 	// TO STRING
 	
-
 	@Override
 	public String toString() {
 		return "Bezeroak [id=" + id + ", nan=" + nan + ", izena=" + izena + ", abizena=" + abizena + ", telefonoa="
 				+ telefonoa + ", email=" + email + ", helbidea=" + helbidea + ", herria=" + herria + ", postakodea="
-				+ postakodea + ", aktiboa=" + aktiboa + "]";
+				+ postakodea + ", pasahitza=" + pasahitza + "]";
 	}
 
 
@@ -167,7 +165,7 @@ public class Bezeroa {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(abizena, aktiboa, email, helbidea, herria, id, izena, nan, postakodea, telefonoa);
+		return Objects.hash(abizena, pasahitza, email, helbidea, herria, id, izena, nan, postakodea, telefonoa);
 	}
 
 
@@ -180,7 +178,7 @@ public class Bezeroa {
 		if (getClass() != obj.getClass())
 			return false;
 		Bezeroa other = (Bezeroa) obj;
-		return Objects.equals(abizena, other.abizena) && aktiboa == other.aktiboa && Objects.equals(email, other.email)
+		return Objects.equals(abizena, other.abizena) && pasahitza == other.pasahitza && Objects.equals(email, other.email)
 				&& Objects.equals(helbidea, other.helbidea) && Objects.equals(herria, other.herria) && id == other.id
 				&& Objects.equals(izena, other.izena) && Objects.equals(nan, other.nan)
 				&& Objects.equals(postakodea, other.postakodea) && Objects.equals(telefonoa, other.telefonoa);
@@ -188,7 +186,7 @@ public class Bezeroa {
 
 
 	// METODOAK
-	public void bezeroakErakutsi() {
+	public void bezeroakIkusi() {
 		String kontsulta = "SELECT * FROM bezeroak LIMIT ? OFFSET ?";
 		int limit = 5;
 		int offset = 0;
@@ -217,11 +215,13 @@ public class Bezeroa {
 							String helbidea = erantzuna.getString("helbidea");
 							String herria = erantzuna.getString("herria");
 							String postakodea = erantzuna.getString("postakodea");
+							String pasahitza = erantzuna.getString("pasahitza");
+							
 							
 							
 							System.out.println("ID: " + id + "| NAN-a: " + nan + "| Izena: " + izena + "| Abizena: "
 									+ abizena + "| Telefonoa: " + telefonoa + "| Posta elektronikoa: " + email
-									+ "| Helbidea: " + helbidea + "| Posta kodea: " + postakodea );
+									+ "| Helbidea: " + helbidea + "| Herria: " + herria + "| Posta Kodea: " + postakodea + "| Pasahitza: " + pasahitza);
 						}
 					}
 				}
@@ -238,6 +238,9 @@ public class Bezeroa {
 			System.out.println("Zerbaitek ez du funtzionatu.");
 		}
 
+	}
+	public void bezeroakEzabatu() {
+		
 	}
 
 
