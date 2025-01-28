@@ -75,7 +75,7 @@ public class App {
 						case 1:
 							System.out.println("Hemen duzu Produktuen zerrenda:");
 							Produktua produktuak = new Produktua();
-							produktuak.produktuakErakutsi();
+							produktuak.produktuakIkusi();
 							break;
 						case 2:
 							Produktua produktuak2 = new Produktua();
@@ -83,7 +83,7 @@ public class App {
 							break;
 						case 3:
 							Produktua produktuak3 = new Produktua();
-							produktuak3.produktuakGehitu();
+							produktuak3.produktuakSartu();
 							break;
 						case 0:
 							System.out.println("Atzera");
@@ -99,12 +99,12 @@ public class App {
 				case 3:
 					System.out.println("Hemen duzu Hornitzaileen zerrenda:");
 					Hornitzailea hornitzaileak = new Hornitzailea();
-					hornitzaileak.hornitzaileakErakutsi();
+					hornitzaileak.hornitzailearenDatuakIkusi();
 					break;
 				case 4:
 					System.out.println("Hemen duzu Bezeroen zerrenda:");
 					Bezeroa bezeroak1 = new Bezeroa();
-					bezeroak1.bezeroakErakutsi();
+					bezeroak1.bezeroakIkusi();
 					break;
 				case 0:
 					System.out.println("Saioa itxita.");
@@ -129,7 +129,7 @@ public class App {
 				case 1:
 					System.out.println("Hemen duzu Langileen zerrenda:");
 					Langilea langileak = new Langilea();
-					langileak.langileakErakutsi();
+					langileak.langilearenDatuakIkusi();
 					break;
 				case 2:
 					int akzioa;
@@ -146,7 +146,7 @@ public class App {
 						case 1:
 							System.out.println("Hemen duzu Produktuen zerrenda:");
 							Produktua produktuak = new Produktua();
-							produktuak.produktuakErakutsi();
+							produktuak.produktuakIkusi();
 							break;
 						case 2:
 							Produktua produktuak2 = new Produktua();
@@ -154,7 +154,7 @@ public class App {
 							break;
 						case 3:
 							Produktua produktuak3 = new Produktua();
-							produktuak3.produktuakGehitu();
+							produktuak3.produktuakSartu();
 							break;
 						case 4:
 							Produktua produktuak4 = new Produktua();
@@ -173,12 +173,12 @@ public class App {
 				case 3:
 					System.out.println("Hemen duzu Hornitzaileen zerrenda:");
 					Hornitzailea hornitzaileak = new Hornitzailea();
-					hornitzaileak.hornitzaileakErakutsi();
+					hornitzaileak.hornitzailearenDatuakIkusi();
 					break;
 				case 4:
 					System.out.println("Hemen duzu Bezeroen zerrenda:");
 					Bezeroa bezeroak1 = new Bezeroa();
-					bezeroak1.bezeroakErakutsi();
+					bezeroak1.bezeroakIkusi();
 					break;
 				case 0:
 					System.out.println("Saioa itxita.");

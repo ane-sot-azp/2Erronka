@@ -11,8 +11,8 @@ import java.util.Scanner;
 public class Langilea {
 
 	// EZAUGARRIAK
-	private int id;
-	private int idlanpostua;
+	private int idLangilea;
+	private int idLanpostua;
 	private String lanpostua;
 	private String nan;
 	private String izena;
@@ -32,11 +32,11 @@ public class Langilea {
 	public Langilea() {
 	}
 
-	public Langilea(int id, int idlanpostua, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
+	public Langilea(int idLangilea, int idLanpostua, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
 			String erabiltzailea, String pasahitza, String helbidea, String postakodea) {
 		super();
-		this.id = id;
-		this.idlanpostua = idlanpostua;
+		this.idLangilea = idLangilea;
+		this.idLanpostua = idLanpostua;
 		this.lanpostua = lanpostua;
 		this.nan = nan;
 		this.izena = izena;
@@ -50,20 +50,20 @@ public class Langilea {
 	}
 
 	// GETTERS eta SETTERS
-	public int getId() {
-		return id;
+	public int getIdLangilea() {
+		return idLangilea;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdLangilea(int idLangilea) {
+		this.idLangilea = idLangilea;
 	}
 
-	public int getIdlanpostua() {
-		return idlanpostua;
+	public int getIdLanpostua() {
+		return idLanpostua;
 	}
 
-	public void setIdlanpostua(int idlanpostua) {
-		this.idlanpostua = idlanpostua;
+	public void setIdLanpostua(int idLanpostua) {
+		this.idLanpostua = idLanpostua;
 	}
 
 	public String getLanpostua() {
@@ -149,7 +149,7 @@ public class Langilea {
 	// TO STRING
 	@Override
 	public String toString() {
-		return "Langileak [id=" + id + ", idlanpostua=" + idlanpostua + ", lanpostua=\" + lanpostua + \", nan=" + nan + ", izena=" + izena + ", abizena="
+		return "Langileak [id=" + idLangilea + ", idLanpostua=" + idLanpostua + ", lanpostua=\" + lanpostua + \", nan=" + nan + ", izena=" + izena + ", abizena="
 				+ abizena + ", telefonoa=" + telefonoa + ", email=" + email + ", erabiltzailea=" + erabiltzailea
 				+ ", pasahitza=" + pasahitza + ", helbidea=" + helbidea + ", postakodea=" + postakodea + "]";
 	}
@@ -158,7 +158,7 @@ public class Langilea {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(abizena, email, erabiltzailea, helbidea, id, idlanpostua, izena, lanpostua, nan, pasahitza,
+		return Objects.hash(abizena, email, erabiltzailea, helbidea, idLangilea, idLanpostua, izena, lanpostua, nan, pasahitza,
 				postakodea, telefonoa);
 	}
 
@@ -173,7 +173,7 @@ public class Langilea {
 		Langilea other = (Langilea) obj;
 		return Objects.equals(abizena, other.abizena) && Objects.equals(email, other.email)
 				&& Objects.equals(erabiltzailea, other.erabiltzailea) && Objects.equals(helbidea, other.helbidea)
-				&& id == other.id && idlanpostua == other.idlanpostua && Objects.equals(izena, other.izena)
+				&& idLangilea == other.idLangilea && idLanpostua == other.idLanpostua && Objects.equals(izena, other.izena)
 				&& Objects.equals(lanpostua, other.lanpostua) && Objects.equals(nan, other.nan)
 				&& Objects.equals(pasahitza, other.pasahitza) && Objects.equals(postakodea, other.postakodea)
 				&& Objects.equals(telefonoa, other.telefonoa);
@@ -201,7 +201,7 @@ public class Langilea {
 						}
 
 						while (erantzuna.next()) {
-							int id = erantzuna.getInt("id");
+							int idLangilea = erantzuna.getInt("idLangilea");
 							int idlanpostua = erantzuna.getInt("idlanpostua");
 							String lanpostua = erantzuna.getString("lanpostua");
 							String nan = erantzuna.getString("nan");
@@ -215,7 +215,7 @@ public class Langilea {
 							String postakodea = erantzuna.getString("postakodea");
 							
 							
-							System.out.println("ID: " + id + "| IdLanpostua: " + idlanpostua + "| Lanpostua: " + lanpostua + "| NAN-a: " + nan + "| Izena: " + izena + "| Abizena: "
+							System.out.println("IdLangilea: " + idLangilea + "| IdLanpostua: " + idlanpostua + "| Lanpostua: " + lanpostua + "| NAN-a: " + nan + "| Izena: " + izena + "| Abizena: "
 									+ abizena + "| Telefonoa: " + telefonoa + "| Posta elektronikoa: " + email
 									+ "| Erabiltzaile izena: " + erabiltzaileizena	+ "| Pasahitza: " + pasahitza +"| Helbidea: " + helbidea + "| Posta kodea: " + postakodea );
 						}
