@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import erronka2.Produktua;
-import erronka2.Hornitzaile;
+import erronka2.Hornitzailea;
 import erronka2.Bezeroa;
 import erronka2.Langilea;
 
@@ -98,7 +98,7 @@ public class App {
 					break;
 				case 3:
 					System.out.println("Hemen duzu Hornitzaileen zerrenda:");
-					Hornitzaile hornitzaileak = new Hornitzaile();
+					Hornitzailea hornitzaileak = new Hornitzailea();
 					hornitzaileak.hornitzaileakErakutsi();
 					break;
 				case 4:
@@ -172,7 +172,7 @@ public class App {
 					break;
 				case 3:
 					System.out.println("Hemen duzu Hornitzaileen zerrenda:");
-					Hornitzaile hornitzaileak = new Hornitzaile();
+					Hornitzailea hornitzaileak = new Hornitzailea();
 					hornitzaileak.hornitzaileakErakutsi();
 					break;
 				case 4:

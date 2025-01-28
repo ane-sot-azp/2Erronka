@@ -12,6 +12,7 @@ public class Langilea {
 
 	// EZAUGARRIAK
 	private int id;
+	private int idlanpostua;
 	private String lanpostua;
 	private String nan;
 	private String izena;
@@ -31,10 +32,11 @@ public class Langilea {
 	public Langilea() {
 	}
 
-	public Langilea(int id, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
+	public Langilea(int id, int idlanpostua, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
 			String erabiltzailea, String pasahitza, String helbidea, String postakodea) {
 		super();
 		this.id = id;
+		this.idlanpostua = idlanpostua;
 		this.lanpostua = lanpostua;
 		this.nan = nan;
 		this.izena = izena;
@@ -54,6 +56,14 @@ public class Langilea {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getIdlanpostua() {
+		return idlanpostua;
+	}
+
+	public void setIdlanpostua(int idlanpostua) {
+		this.idlanpostua = idlanpostua;
 	}
 
 	public String getLanpostua() {
@@ -139,16 +149,17 @@ public class Langilea {
 	// TO STRING
 	@Override
 	public String toString() {
-		return "Langileak [id=" + id + ", lanpostua=" + lanpostua + ", nan=" + nan + ", izena=" + izena + ", abizena="
+		return "Langileak [id=" + id + ", idlanpostua=" + idlanpostua + ", lanpostua=\" + lanpostua + \", nan=" + nan + ", izena=" + izena + ", abizena="
 				+ abizena + ", telefonoa=" + telefonoa + ", email=" + email + ", erabiltzailea=" + erabiltzailea
 				+ ", pasahitza=" + pasahitza + ", helbidea=" + helbidea + ", postakodea=" + postakodea + "]";
 	}
 
 	// HASHCODE eta EQUALS
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(abizena, email, erabiltzailea, helbidea, id, izena, lanpostua, nan, pasahitza, postakodea,
-				telefonoa);
+		return Objects.hash(abizena, email, erabiltzailea, helbidea, id, idlanpostua, izena, lanpostua, nan, pasahitza,
+				postakodea, telefonoa);
 	}
 
 	@Override
@@ -162,14 +173,15 @@ public class Langilea {
 		Langilea other = (Langilea) obj;
 		return Objects.equals(abizena, other.abizena) && Objects.equals(email, other.email)
 				&& Objects.equals(erabiltzailea, other.erabiltzailea) && Objects.equals(helbidea, other.helbidea)
-				&& id == other.id && Objects.equals(izena, other.izena) && Objects.equals(lanpostua, other.lanpostua)
-				&& Objects.equals(nan, other.nan) && Objects.equals(pasahitza, other.pasahitza)
-				&& Objects.equals(postakodea, other.postakodea) && Objects.equals(telefonoa, other.telefonoa);
+				&& id == other.id && idlanpostua == other.idlanpostua && Objects.equals(izena, other.izena)
+				&& Objects.equals(lanpostua, other.lanpostua) && Objects.equals(nan, other.nan)
+				&& Objects.equals(pasahitza, other.pasahitza) && Objects.equals(postakodea, other.postakodea)
+				&& Objects.equals(telefonoa, other.telefonoa);
 	}
 
 	// METODOAK
 	// Imprimitu metodoa, produktuen datu guztiak ematen dituena.
-	public void langileakErakutsi() {
+	public void langilearenDatuakIkusi() {
 		String kontsulta = "SELECT * FROM langileak LIMIT ? OFFSET ?";
 		int limit = 5;
 		int offset = 0;
@@ -190,6 +202,7 @@ public class Langilea {
 
 						while (erantzuna.next()) {
 							int id = erantzuna.getInt("id");
+							int idlanpostua = erantzuna.getInt("idlanpostua");
 							String lanpostua = erantzuna.getString("lanpostua");
 							String nan = erantzuna.getString("nan");
 							String izena = erantzuna.getString("izena");
@@ -202,7 +215,7 @@ public class Langilea {
 							String postakodea = erantzuna.getString("postakodea");
 							
 							
-							System.out.println("ID: " + id + "| Lanpostua: " + lanpostua + "| NAN-a: " + nan + "| Izena: " + izena + "| Abizena: "
+							System.out.println("ID: " + id + "| IdLanpostua: " + idlanpostua + "| Lanpostua: " + lanpostua + "| NAN-a: " + nan + "| Izena: " + izena + "| Abizena: "
 									+ abizena + "| Telefonoa: " + telefonoa + "| Posta elektronikoa: " + email
 									+ "| Erabiltzaile izena: " + erabiltzaileizena	+ "| Pasahitza: " + pasahitza +"| Helbidea: " + helbidea + "| Posta kodea: " + postakodea );
 						}
@@ -221,6 +234,15 @@ public class Langilea {
 			System.out.println("Zerbaitek ez du funtzionatu.");
 		}
 
+	}
+	public void langileBerriaSartu() {
+		
+	}
+	public void langiearenDatuakEguneratu() {
+		
+	}
+	public void langileaEzabatu() {
+		
 	}
 
 }
