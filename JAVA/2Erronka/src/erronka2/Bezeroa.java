@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Bezeroak {
+public class Bezeroa {
 
 	// EZAUGARRIAK
 	private int id;
@@ -27,11 +27,11 @@ public class Bezeroak {
 	private static final String PASAHITZA = "1erronka";
 
 	// SORTZAILEAK(CONSTRUCTORES)
-	public Bezeroak() {
+	public Bezeroa() {
 	}
 
 	
-	public Bezeroak(int id, String nan, String izena, String abizena, String telefonoa, String email, String helbidea,
+	public Bezeroa(int id, String nan, String izena, String abizena, String telefonoa, String email, String helbidea,
 			String herria, String postakodea, boolean aktiboa) {
 		super();
 		this.id = id;
@@ -179,7 +179,7 @@ public class Bezeroak {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Bezeroak other = (Bezeroak) obj;
+		Bezeroa other = (Bezeroa) obj;
 		return Objects.equals(abizena, other.abizena) && aktiboa == other.aktiboa && Objects.equals(email, other.email)
 				&& Objects.equals(helbidea, other.helbidea) && Objects.equals(herria, other.herria) && id == other.id
 				&& Objects.equals(izena, other.izena) && Objects.equals(nan, other.nan)

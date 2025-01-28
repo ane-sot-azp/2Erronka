@@ -6,10 +6,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import erronka2.Produktuak;
-import erronka2.Hornitzaileak;
-import erronka2.Bezeroak;
-import erronka2.Langileak;
+import erronka2.Produktua;
+import erronka2.Hornitzaile;
+import erronka2.Bezeroa;
+import erronka2.Langilea;
 
 
 public class App {
@@ -74,15 +74,15 @@ public class App {
 						switch (akzioa) {
 						case 1:
 							System.out.println("Hemen duzu Produktuen zerrenda:");
-							Produktuak produktuak = new Produktuak();
+							Produktua produktuak = new Produktua();
 							produktuak.produktuakErakutsi();
 							break;
 						case 2:
-							Produktuak produktuak2 = new Produktuak();
+							Produktua produktuak2 = new Produktua();
 							produktuak2.produktuakEguneratu();
 							break;
 						case 3:
-							Produktuak produktuak3 = new Produktuak();
+							Produktua produktuak3 = new Produktua();
 							produktuak3.produktuakGehitu();
 							break;
 						case 0:
@@ -98,12 +98,12 @@ public class App {
 					break;
 				case 3:
 					System.out.println("Hemen duzu Hornitzaileen zerrenda:");
-					Hornitzaileak hornitzaileak = new Hornitzaileak();
+					Hornitzaile hornitzaileak = new Hornitzaile();
 					hornitzaileak.hornitzaileakErakutsi();
 					break;
 				case 4:
 					System.out.println("Hemen duzu Bezeroen zerrenda:");
-					Bezeroak bezeroak1 = new Bezeroak();
+					Bezeroa bezeroak1 = new Bezeroa();
 					bezeroak1.bezeroakErakutsi();
 					break;
 				case 0:
@@ -128,7 +128,7 @@ public class App {
 				switch (zerrendaAukera) {
 				case 1:
 					System.out.println("Hemen duzu Langileen zerrenda:");
-					Langileak langileak = new Langileak();
+					Langilea langileak = new Langilea();
 					langileak.langileakErakutsi();
 					break;
 				case 2:
@@ -145,19 +145,19 @@ public class App {
 						switch (akzioa) {
 						case 1:
 							System.out.println("Hemen duzu Produktuen zerrenda:");
-							Produktuak produktuak = new Produktuak();
+							Produktua produktuak = new Produktua();
 							produktuak.produktuakErakutsi();
 							break;
 						case 2:
-							Produktuak produktuak2 = new Produktuak();
+							Produktua produktuak2 = new Produktua();
 							produktuak2.produktuakEguneratu();
 							break;
 						case 3:
-							Produktuak produktuak3 = new Produktuak();
+							Produktua produktuak3 = new Produktua();
 							produktuak3.produktuakGehitu();
 							break;
 						case 4:
-							Produktuak produktuak4 = new Produktuak();
+							Produktua produktuak4 = new Produktua();
 							produktuak4.produktuakEzabatu();
 							break;
 						case 0:
@@ -172,12 +172,12 @@ public class App {
 					break;
 				case 3:
 					System.out.println("Hemen duzu Hornitzaileen zerrenda:");
-					Hornitzaileak hornitzaileak = new Hornitzaileak();
+					Hornitzaile hornitzaileak = new Hornitzaile();
 					hornitzaileak.hornitzaileakErakutsi();
 					break;
 				case 4:
 					System.out.println("Hemen duzu Bezeroen zerrenda:");
-					Bezeroak bezeroak1 = new Bezeroak();
+					Bezeroa bezeroak1 = new Bezeroa();
 					bezeroak1.bezeroakErakutsi();
 					break;
 				case 0:

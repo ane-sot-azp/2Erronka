@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class Langileak {
+public class Langilea {
 
 	// EZAUGARRIAK
 	private int id;
@@ -28,10 +28,10 @@ public class Langileak {
 	private static final String PASAHITZA = "1erronka";
 
 	// SORTZAILEAK(CONSTRUCTORES)
-	public Langileak() {
+	public Langilea() {
 	}
 
-	public Langileak(int id, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
+	public Langilea(int id, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
 			String erabiltzailea, String pasahitza, String helbidea, String postakodea) {
 		super();
 		this.id = id;
@@ -159,7 +159,7 @@ public class Langileak {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Langileak other = (Langileak) obj;
+		Langilea other = (Langilea) obj;
 		return Objects.equals(abizena, other.abizena) && Objects.equals(email, other.email)
 				&& Objects.equals(erabiltzailea, other.erabiltzailea) && Objects.equals(helbidea, other.helbidea)
 				&& id == other.id && Objects.equals(izena, other.izena) && Objects.equals(lanpostua, other.lanpostua)

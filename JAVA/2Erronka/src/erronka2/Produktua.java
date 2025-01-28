@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Produktuak {
+public class Produktua {
 
 	// EZAUGARRIAK
 	private int id;
@@ -33,10 +33,10 @@ public class Produktuak {
 	private static final String PASAHITZA = "1erronka";
 
 	// SORTZAILEAK(CONSTRUCTORES)
-	public Produktuak() {
+	public Produktua() {
 	}
 
-	public Produktuak(int id, String mota, String marka, String modeloa, String memoria, String prozesagailua,
+	public Produktua(int id, String mota, String marka, String modeloa, String memoria, String prozesagailua,
 			String tamaina, String sistemaEragilea, String kamara, String resoluzioa, String frekuentzia,
 			String kolorea, double erosketaPrezioa, double salmentaPrezioa, boolean stocka) {
 		super();
@@ -205,7 +205,7 @@ public class Produktuak {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Produktuak other = (Produktuak) obj;
+		Produktua other = (Produktua) obj;
 		return Double.doubleToLongBits(erosketaPrezioa) == Double.doubleToLongBits(other.erosketaPrezioa)
 				&& Objects.equals(frekuentzia, other.frekuentzia) && id == other.id
 				&& Objects.equals(kamara, other.kamara) && Objects.equals(kolorea, other.kolorea)
