@@ -9,11 +9,11 @@ import java.util.Objects;
 import java.util.Scanner;
 import java.sql.Statement;
 
-public class DBKonexioa {
-	private static String ERABILTZAILEA = "administratzailea";
-	private static String PASAHITZA = "1erronka";
+public class  DBKonexioa {
+	private static String ERABILTZAILEA = "root";
+	private static String PASAHITZA = "1MG2024";
 	private static String DB = "2Erronka";
-	private static String URL = "jdbc:mysql://172.16.242.107:3306/"+DB;
+	private static String URL = "jdbc:mysql://172.16.237.9:3306/"+DB;
 	
 	private static Connection conn;
 	private static Statement st_= null;
@@ -36,4 +36,5 @@ public class DBKonexioa {
 		catch (ClassNotFoundException e) {e.printStackTrace();}
 		catch (Exception e) {e.printStackTrace();}
 		}
-	}
+}
+
