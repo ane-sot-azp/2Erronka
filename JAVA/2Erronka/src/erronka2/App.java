@@ -15,6 +15,8 @@ import erronka2.Langilea;
 public class App {
 
 	public static void main(String[] args) {
+		//DBKonexioa konexioa = new DBKonexioa();
+		//konexioa.konexioaEgin();
 		Scanner sc = new Scanner(System.in);
 		String erabiltzaileaAdmin = "admin";
 		String pasahitzaAdmin = "1234";
@@ -145,7 +147,7 @@ public class App {
 						switch (akzioa) {
 						case 1:
 							System.out.println("Hemen duzu Produktuen zerrenda:");
-							Produktua produktuak = new Produktua();
+							Produktua2 produktuak = new Produktua2();
 							produktuak.produktuakIkusi();
 							break;
 						case 2:
@@ -190,4 +192,5 @@ public class App {
 			} while (zerrendaAukera != 0);
 		}sc.close();
 	}
-}
+		
+	}
