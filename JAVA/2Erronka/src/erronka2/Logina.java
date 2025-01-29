@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class Logina extends JFrame {
 
@@ -52,26 +53,27 @@ public class Logina extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(153, 204, 255));
-		panel.setBounds(10, 11, 975, 422);
+		panel.setBackground(new Color(255, 255, 255));
+		panel.setBounds(10, 11, 978, 434);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Saioa hasi");
+		lblNewLabel.setBackground(new Color(102, 153, 255));
 		lblNewLabel.setBounds(375, 105, 222, 60);
-		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setForeground(new Color(0, 0, 0));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 42));
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Erabiltzailea:");
 		lblNewLabel_1.setBounds(102, 196, 192, 35);
-		lblNewLabel_1.setForeground(new Color(255, 255, 255));
+		lblNewLabel_1.setForeground(new Color(0, 0, 0));
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 29));
 		panel.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Pasahitza: ");
 		lblNewLabel_2.setBounds(133, 265, 161, 35);
-		lblNewLabel_2.setForeground(new Color(255, 255, 255));
+		lblNewLabel_2.setForeground(new Color(0, 0, 0));
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.BOLD, 29));
 		panel.add(lblNewLabel_2);
 		
@@ -113,5 +115,10 @@ public class Logina extends JFrame {
 		btnNewButton.setForeground(new Color(0, 0, 0));
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		panel.add(btnNewButton);
+		
+		JLabel lblFondoa = new JLabel("New label");
+		lblFondoa.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\UTech java fondoa 1(1).png"));
+		lblFondoa.setBounds(-11, -11, 979, 434);
+		panel.add(lblFondoa);
 	}
 }
