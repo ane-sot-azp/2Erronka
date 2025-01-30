@@ -6,9 +6,13 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JButton;
 
 public class Printzipala extends JFrame {
@@ -37,7 +41,7 @@ public class Printzipala extends JFrame {
 	 */
 	public Printzipala() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 985, 469);
+		setBounds(100, 100, 1000, 497);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -45,130 +49,169 @@ public class Printzipala extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblEskHisto_2 = new JLabel("Historikoa");
-		lblEskHisto_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblEskHisto_2.setBounds(800, 221, 81, 18);
-		contentPane.add(lblEskHisto_2);
-		
-		JLabel lblEskaHisto_1 = new JLabel("Eskaeren");
-		lblEskaHisto_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblEskaHisto_1.setBounds(804, 204, 74, 18);
-		contentPane.add(lblEskaHisto_1);
-		
-		JLabel lblEsakerak = new JLabel("Eskaerak");
-		lblEsakerak.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblEsakerak.setBounds(804, 23, 71, 18);
-		contentPane.add(lblEsakerak);
-		
-		JLabel lblEskaera = new JLabel("Eskaera");
-		lblEskaera.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblEskaera.setBounds(627, 221, 62, 23);
-		contentPane.add(lblEskaera);
-		
-		JLabel lblPiezen = new JLabel("Piezen");
-		lblPiezen.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblPiezen.setBounds(631, 204, 53, 18);
-		contentPane.add(lblPiezen);
-		
-		JLabel lblPiezak = new JLabel("Piezak");
-		lblPiezak.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblPiezak.setBounds(639, 23, 50, 18);
-		contentPane.add(lblPiezak);
-		
-		JLabel lblEskaeraIco_1 = new JLabel("New label");
-		lblEskaeraIco_1.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonEskaeraHistorikoa(1).png"));
-		lblEskaeraIco_1.setBounds(771, 251, 134, 107);
-		contentPane.add(lblEskaeraIco_1);
+		JLabel lblEskHistoIco = new JLabel("New label");
+		lblEskHistoIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerenHistorikoa(1).png"));
+		lblEskHistoIco.setBounds(771, 251, 134, 107);
+		contentPane.add(lblEskHistoIco);
+		lblEskHistoIco.addMouseListener(new MouseAdapter () {
+			
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskaera Historikotara sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				EskHistorikoPanela ehp = new EskHistorikoPanela();
+				ehp.setVisible(true);
+				
+				
+			}
+		}); 
 		
 		JLabel lblPiezaEskIco = new JLabel("New label");
-		lblPiezaEskIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonPiezaEskaera(1).png"));
+		lblPiezaEskIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezenEskaera(1).png"));
 		lblPiezaEskIco.setBounds(593, 251, 134, 107);
 		contentPane.add(lblPiezaEskIco);
+		lblPiezaEskIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				PiezaEskPanela piep = new PiezaEskPanela();
+				piep.setVisible(true);
+			}
+		}); 
 		
 		JLabel lblEskaeraIco = new JLabel("New label");
-		lblEskaeraIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonEskaera(1).png"));
+		lblEskaeraIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerak(1).png"));
 		lblEskaeraIco.setBounds(771, 52, 134, 107);
 		contentPane.add(lblEskaeraIco);
+		lblEskaeraIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskaeretan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				EskaeraPanela ep = new EskaeraPanela();
+				ep.setVisible(true);
+			}
+		}); 
 		
 		JLabel lblPiezakIco = new JLabel("New label");
-		lblPiezakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonPieza(1).png"));
+		lblPiezakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezak(1).png"));
 		lblPiezakIco.setBounds(593, 52, 134, 107);
 		contentPane.add(lblPiezakIco);
+		lblPiezakIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				PiezaPanela pip = new PiezaPanela();
+				pip.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblBalorazioak = new JLabel("Balorazioak");
-		lblBalorazioak.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblBalorazioak.setBounds(444, 221, 91, 23);
-		contentPane.add(lblBalorazioak);
+		JLabel lblBalorazioakIco = new JLabel("New label");
+		lblBalorazioakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\balorazioak(1).png"));
+		lblBalorazioakIco.setBounds(413, 251, 134, 107);
+		contentPane.add(lblBalorazioakIco);
+		lblBalorazioakIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Produktuen balorazioetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				BalorazioakPanela balp = new BalorazioakPanela();
+				balp.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblLangileakIco_1_1 = new JLabel("New label");
-		lblLangileakIco_1_1.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonBalorazioa(1).png"));
-		lblLangileakIco_1_1.setBounds(413, 251, 134, 107);
-		contentPane.add(lblLangileakIco_1_1);
-		
-		JLabel lblBezeroak = new JLabel("Bezeroak");
-		lblBezeroak.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblBezeroak.setBounds(265, 221, 74, 23);
-		contentPane.add(lblBezeroak);
-		
-		JLabel lblLangileakIco_1 = new JLabel("New label");
-		lblLangileakIco_1.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonBezeroa(1).png"));
-		lblLangileakIco_1.setBounds(239, 251, 134, 107);
-		contentPane.add(lblLangileakIco_1);
-		
-		JLabel lblProdPrsTxt_1_1 = new JLabel("Prestakuntzan");
-		lblProdPrsTxt_1_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblProdPrsTxt_1_1.setBounds(70, 221, 115, 18);
-		contentPane.add(lblProdPrsTxt_1_1);
-		
-		JLabel lblProdPrsTxt_1 = new JLabel("Produktuak");
-		lblProdPrsTxt_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblProdPrsTxt_1.setBounds(80, 204, 89, 18);
-		contentPane.add(lblProdPrsTxt_1);
+		JLabel lblBezeroakIco = new JLabel("New label");
+		lblBezeroakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\bezeroak(1).png"));
+		lblBezeroakIco.setBounds(239, 251, 134, 107);
+		contentPane.add(lblBezeroakIco);
+		lblBezeroakIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Bezeroetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				BezeroakPanela bp = new BezeroakPanela();
+				bp.setVisible(true);
+			}
+		}); 
 		
 		JLabel lblProduktPresIco = new JLabel("New label");
-		lblProduktPresIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonProduktuaPrestakuntzan(1).png"));
+		lblProduktPresIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuakPrestakuntzan(1).png"));
 		lblProduktPresIco.setBounds(61, 251, 134, 107);
 		contentPane.add(lblProduktPresIco);
+		lblProduktPresIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Produktuen prestakuntzan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				ProdPrestPanela ppp = new ProdPrestPanela();
+				ppp.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblHornitzailtxt = new JLabel("Hornitzaileak");
-		lblHornitzailtxt.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblHornitzailtxt.setBounds(433, 23, 102, 18);
-		contentPane.add(lblHornitzailtxt);
+		JButton btnAtzera = new JButton("X");
+		btnAtzera.setForeground(new Color(255, 255, 255));
+		btnAtzera.setBackground(new Color(255, 51, 51));
+		btnAtzera.setIcon(null);
+		btnAtzera.setBounds(929, 0, 59, 23);
+		contentPane.add(btnAtzera);
 		
-		JLabel lbLangileaktxt = new JLabel("Langileak");
-		lbLangileaktxt.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lbLangileaktxt.setBounds(265, 23, 74, 23);
-		contentPane.add(lbLangileaktxt);
-		
-		JButton btnNewButton = new JButton("<--");
-		btnNewButton.setIcon(null);
-		btnNewButton.setBounds(0, 0, 59, 23);
-		contentPane.add(btnNewButton);
-		
-		JLabel lblProdtxt = new JLabel("Produktuak");
-		lblProdtxt.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblProdtxt.setBounds(80, 23, 89, 18);
-		contentPane.add(lblProdtxt);
-		
-		JLabel lblProduktuakIco = new JLabel("New label");
-		lblProduktuakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonProduktua(1).png"));
-		lblProduktuakIco.setBounds(61, 52, 134, 107);
+		JLabel lblProduktuakIco = new JLabel("");
+		lblProduktuakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuak(1).png"));
+		lblProduktuakIco.setBounds(61, 52, 134, 108);
 		contentPane.add(lblProduktuakIco);
+		lblProduktuakIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ProduktuakPanela pp = new ProduktuakPanela();
+				pp.setVisible(true);
+			}
+			
+		});
 		
 		JLabel lblLangileakIco = new JLabel("New label");
-		lblLangileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonLangilea(1).png"));
+		lblLangileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\langileak(1).png"));
 		lblLangileakIco.setBounds(239, 52, 134, 107);
 		contentPane.add(lblLangileakIco);
+		lblLangileakIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Langileetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				LangileakPanela lp = new LangileakPanela();
+				lp.setVisible(true);
+			}
+		}); 
+			
 		
 		JLabel lblHornitzaileakIco = new JLabel("New label");
-		lblHornitzaileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\ikonHornitzailea(1).png"));
+		lblHornitzaileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\hornitzaileak(1).png"));
 		lblHornitzaileakIco.setBounds(413, 52, 134, 107);
 		contentPane.add(lblHornitzaileakIco);
+		lblHornitzaileakIco.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Hornitzailetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				HornitzailePanela hp = new HornitzailePanela();
+				hp.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblFondoa = new JLabel("New label");
+		JLabel lblFondoa = new JLabel("");
 		lblFondoa.setSize(100, 100);
 		lblFondoa.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\UTech java fondoa 1(1).png"));
-		lblFondoa.setBounds(0, 0, 973, 434);
+		lblFondoa.setBounds(0, 0, 988, 462);
 		contentPane.add(lblFondoa);
 		
 		JLabel label = new JLabel("New label");

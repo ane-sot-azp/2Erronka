@@ -98,7 +98,7 @@ public class Logina extends JFrame {
 				
 				if(txtErabiltzailea.getText().equals("Beñat") && pasahitzaFinala.equals("123")) {
 					dispose();
-					JOptionPane.showMessageDialog(null, "Ongi etorri Utopiah System programara", "SARTU ZARA",
+					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System programara", "SARTU ZARA",
 							JOptionPane.INFORMATION_MESSAGE);
 					
 					Printzipala p = new Printzipala();
@@ -116,7 +116,7 @@ public class Logina extends JFrame {
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		panel.add(btnNewButton);
 		
-		JLabel lblFondoa = new JLabel("New label");
+		JLabel lblFondoa = new JLabel("");
 		lblFondoa.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\UTech java fondoa 1(1).png"));
 		lblFondoa.setBounds(-11, -11, 979, 434);
 		panel.add(lblFondoa);
