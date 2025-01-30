@@ -95,14 +95,39 @@ public class Logina extends JFrame {
 				
 				char[] pasahitza = jpassPasahitza.getPassword();
 				String pasahitzaFinala = new String (pasahitza);
-				
-				if(txtErabiltzailea.getText().equals("Beñat") && pasahitzaFinala.equals("123")) {
+				//ADMINAREN MENUAN SARTZEKO
+				if(txtErabiltzailea.getText().equals("Admin") && pasahitzaFinala.equals("utopi")) {
 					dispose();
-					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System programara", "SARTU ZARA",
+					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System administratzailearen programara", "SARTU ZARA",
 							JOptionPane.INFORMATION_MESSAGE);
 					
 					Printzipala p = new Printzipala();
 					p.setVisible(true);
+				}//GARRAIOAREN MENUAN SARTZEKO
+				else if(txtErabiltzailea.getText().equals("Garraio") && pasahitzaFinala.equals("utopi")) {
+					dispose();
+					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System garraiolarientzako programara", "SARTU ZARA",
+							JOptionPane.INFORMATION_MESSAGE);
+					
+					PrintzipalaGarraioa pg = new PrintzipalaGarraioa();
+					pg.setVisible(true);
+				}//GERENTEAREN MENUAN SARTZEKO
+				else if(txtErabiltzailea.getText().equals("Gerente") && pasahitzaFinala.equals("utopi")) {
+					dispose();
+					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System gerententzako programara", "SARTU ZARA",
+							JOptionPane.INFORMATION_MESSAGE);
+					
+					PrintzipalaGerentea pgr = new PrintzipalaGerentea();
+					pgr.setVisible(true);
+				}//LANGILEAREN MENUAN SARTZEKO
+				else if(txtErabiltzailea.getText().equals("Langile") && pasahitzaFinala.equals("utopi")) {
+					dispose();
+					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System langilearentzako programara", "SARTU ZARA",
+							JOptionPane.INFORMATION_MESSAGE);
+					
+					PrintzipalaLangilea pla = new PrintzipalaLangilea();
+					pla.setVisible(true);
+				
 				}else {
 					JOptionPane.showMessageDialog(null, "Erabiltzailea edo pasahitza ez dira zuzenak", "ERROREA!",
 							JOptionPane.ERROR_MESSAGE);

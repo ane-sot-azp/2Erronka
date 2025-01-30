@@ -43,13 +43,18 @@ public class Printzipala extends JFrame {
 	 */
 	public Printzipala() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1000, 497);
+		setBounds(100, 100, 1000, 490);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("Administratzailea");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 28));
+		lblNewLabel_1.setBounds(731, 419, 247, 32);
+		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblEskHistoIco = new JLabel("New label");
 		lblEskHistoIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerenHistorikoa(1).png"));
@@ -159,19 +164,19 @@ public class Printzipala extends JFrame {
 			}
 		}); 
 		
-		JButton btnAtzera = new JButton("");
-		btnAtzera.addActionListener(new ActionListener() {
+		JButton btnAtera = new JButton("");
+		btnAtera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
 						JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
-		btnAtzera.setForeground(new Color(255, 255, 255));
-		btnAtzera.setBackground(new Color(255, 51, 51));
-		btnAtzera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
-		btnAtzera.setBounds(956, 0, 32, 32);
-		contentPane.add(btnAtzera);
+		btnAtera.setForeground(new Color(255, 255, 255));
+		btnAtera.setBackground(new Color(255, 51, 51));
+		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
+		btnAtera.setBounds(956, 0, 32, 32);
+		contentPane.add(btnAtera);
 		
 		JLabel lblProduktuakIco = new JLabel("");
 		lblProduktuakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuak(1).png"));
@@ -182,6 +187,8 @@ public class Printzipala extends JFrame {
 			public void mouseClicked(MouseEvent e) {
 				ProduktuakPanela pp = new ProduktuakPanela();
 				pp.setVisible(true);
+				JOptionPane.showMessageDialog(null, "Produktuetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 		});
@@ -220,7 +227,7 @@ public class Printzipala extends JFrame {
 		JLabel lblFondoa = new JLabel("");
 		lblFondoa.setSize(100, 100);
 		lblFondoa.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\UTech java fondoa 1(1).png"));
-		lblFondoa.setBounds(0, 0, 988, 462);
+		lblFondoa.setBounds(0, 0, 988, 445);
 		contentPane.add(lblFondoa);
 		
 		JLabel label = new JLabel("New label");
