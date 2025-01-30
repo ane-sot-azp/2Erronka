@@ -14,6 +14,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Printzipala extends JFrame {
 
@@ -157,11 +159,18 @@ public class Printzipala extends JFrame {
 			}
 		}); 
 		
-		JButton btnAtzera = new JButton("X");
+		JButton btnAtzera = new JButton("");
+		btnAtzera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
 		btnAtzera.setForeground(new Color(255, 255, 255));
 		btnAtzera.setBackground(new Color(255, 51, 51));
-		btnAtzera.setIcon(null);
-		btnAtzera.setBounds(929, 0, 59, 23);
+		btnAtzera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
+		btnAtzera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtzera);
 		
 		JLabel lblProduktuakIco = new JLabel("");
