@@ -51,6 +51,24 @@ public class Printzipala extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JButton btnSaioaItxi = new JButton("");
+		btnSaioaItxi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Saioa itxi nahi duzu?", "SAIOA ITXI", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
+				dispose();
+				
+				Logina log = new Logina();
+				log.setVisible(true);
+				}else {}
+			}
+		});
+		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
+		btnSaioaItxi.setBounds(10, 420, 110, 32);
+		contentPane.add(btnSaioaItxi);
+		
 		JLabel lblNewLabel_1 = new JLabel("Administratzailea");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 28));
 		lblNewLabel_1.setBounds(731, 419, 247, 32);
@@ -61,7 +79,6 @@ public class Printzipala extends JFrame {
 		lblEskHistoIco.setBounds(771, 251, 134, 107);
 		contentPane.add(lblEskHistoIco);
 		lblEskHistoIco.addMouseListener(new MouseAdapter () {
-			
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
@@ -167,9 +184,14 @@ public class Printzipala extends JFrame {
 		JButton btnAtera = new JButton("");
 		btnAtera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?", "Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
 				dispose();
 				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
 						JOptionPane.INFORMATION_MESSAGE);
+				}else {}
 			}
 		});
 		btnAtera.setForeground(new Color(255, 255, 255));

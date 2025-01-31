@@ -13,6 +13,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class PrintzipalaGerentea extends JFrame {
 
@@ -48,42 +50,115 @@ public class PrintzipalaGerentea extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JButton btnSaioaItxi = new JButton("");
+		btnSaioaItxi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Saioa itxi nahi duzu?", "SAIOA ITXI", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
+				dispose();
+				
+				Logina log = new Logina();
+				log.setVisible(true);
+				}else {}
+			}
+		});
+		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
+		btnSaioaItxi.setBounds(10, 420, 110, 32);
+		contentPane.add(btnSaioaItxi);
+		
 		JLabel lblNewLabel_1 = new JLabel("Gerentea");
 		lblNewLabel_1.setBounds(840, 419, 138, 32);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 28));
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblBalorazioakIco = new JLabel("New label");
-		lblBalorazioakIco.setBounds(771, 52, 134, 107);
-		lblBalorazioakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\balorazioak(1).png"));
-		contentPane.add(lblBalorazioakIco);
+		JLabel lblBalorazioakIco_G = new JLabel("New label");
+		lblBalorazioakIco_G.setBounds(771, 52, 134, 107);
+		lblBalorazioakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\balorazioak(1).png"));
+		contentPane.add(lblBalorazioakIco_G);
+		lblBalorazioakIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Produktuen balorazioetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GBalorazioakPanela gbalp = new GBalorazioakPanela();
+				gbalp.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblEskHistoIco = new JLabel("New label");
-		lblEskHistoIco.setBounds(593, 251, 134, 107);
-		lblEskHistoIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerenHistorikoa(1).png"));
-		contentPane.add(lblEskHistoIco);
+		JLabel lblEskHistoIco_G = new JLabel("New label");
+		lblEskHistoIco_G.setBounds(683, 251, 134, 107);
+		lblEskHistoIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerenHistorikoa(1).png"));
+		contentPane.add(lblEskHistoIco_G);
+		lblEskHistoIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskaera Historikotara sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GEskHistorikoPanela gehp = new GEskHistorikoPanela();
+				gehp.setVisible(true);	
+			}
+		}); 
 		
-		JLabel lblEskaeraIco = new JLabel("New label");
-		lblEskaeraIco.setBounds(593, 52, 134, 107);
-		lblEskaeraIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerak(1).png"));
-		contentPane.add(lblEskaeraIco);
+		JLabel lblEskaeraIco_G = new JLabel("New label");
+		lblEskaeraIco_G.setBounds(593, 52, 134, 107);
+		lblEskaeraIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerak(1).png"));
+		contentPane.add(lblEskaeraIco_G);
+		lblEskaeraIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskaeretan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GEskaeraPanela gep = new GEskaeraPanela();
+				gep.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblPiezaEskIco = new JLabel("New label");
-		lblPiezaEskIco.setBounds(413, 251, 134, 107);
-		lblPiezaEskIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezenEskaera(1).png"));
-		contentPane.add(lblPiezaEskIco);
+		JLabel lblPiezaEskIco_G = new JLabel("New label");
+		lblPiezaEskIco_G.setBounds(513, 251, 134, 107);
+		lblPiezaEskIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezenEskaera(1).png"));
+		contentPane.add(lblPiezaEskIco_G);
+		lblPiezaEskIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GPiezaEskPanela gpiep = new GPiezaEskPanela();
+				gpiep.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblPiezakIco = new JLabel("New label");
-		lblPiezakIco.setBounds(413, 52, 134, 107);
-		lblPiezakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezak(1).png"));
-		contentPane.add(lblPiezakIco);
+		JLabel lblPiezakIco_G = new JLabel("New label");
+		lblPiezakIco_G.setBounds(413, 52, 134, 107);
+		lblPiezakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezak(1).png"));
+		contentPane.add(lblPiezakIco_G);
+		lblPiezakIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GPiezaPanela gpip = new GPiezaPanela();
+				gpip.setVisible(true);
+			}
+		}); 
 		
 		JButton btnAtera = new JButton("");
 		btnAtera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?", "Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
 				dispose();
 				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
 						JOptionPane.INFORMATION_MESSAGE);
+				}else {}
 			}
 		});
 		btnAtera.setBounds(956, 0, 32, 32);
@@ -93,25 +168,65 @@ public class PrintzipalaGerentea extends JFrame {
 		contentPane.add(btnAtera);
 		
 		
-		JLabel lblHornitzaileakIco = new JLabel("New label");
-		lblHornitzaileakIco.setBounds(239, 251, 134, 107);
-		lblHornitzaileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\hornitzaileak(1).png"));
-		contentPane.add(lblHornitzaileakIco);
+		JLabel lblHornitzaileakIco_G = new JLabel("New label");
+		lblHornitzaileakIco_G.setBounds(328, 251, 134, 107);
+		lblHornitzaileakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\hornitzaileak(1).png"));
+		contentPane.add(lblHornitzaileakIco_G);
+		lblHornitzaileakIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Hornitzailetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GHornitzailePanela ghp = new GHornitzailePanela();
+				ghp.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblBezeroakIco = new JLabel("New label");
-		lblBezeroakIco.setBounds(239, 52, 134, 107);
-		lblBezeroakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\bezeroak(1).png"));
-		contentPane.add(lblBezeroakIco);
+		JLabel lblBezeroakIco_G = new JLabel("New label");
+		lblBezeroakIco_G.setBounds(239, 52, 134, 107);
+		lblBezeroakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\bezeroak(1).png"));
+		contentPane.add(lblBezeroakIco_G);
+		lblBezeroakIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Bezeroetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GBezeroakPanela gbp = new GBezeroakPanela();
+				gbp.setVisible(true);
+			}
+		}); 
 		
-		JLabel lblProduktuakIco = new JLabel("");
-		lblProduktuakIco.setBounds(61, 52, 134, 108);
-		lblProduktuakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuak(1).png"));
-		contentPane.add(lblProduktuakIco);
+		JLabel lblProduktuakIco_G = new JLabel("");
+		lblProduktuakIco_G.setBounds(61, 52, 134, 108);
+		lblProduktuakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuak(1).png"));
+		contentPane.add(lblProduktuakIco_G);
+		lblProduktuakIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				GProduktuakPanela gpp = new GProduktuakPanela();
+				gpp.setVisible(true);
+				JOptionPane.showMessageDialog(null, "Produktuetan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+			}
+			
+		});
 		
-		JLabel lblProduktPresIco_1 = new JLabel("New label");
-		lblProduktPresIco_1.setBounds(61, 251, 134, 107);
-		lblProduktPresIco_1.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuakPrestakuntzan(1).png"));
-		contentPane.add(lblProduktPresIco_1);
+		JLabel lblProduktPresIco_G = new JLabel("New label");
+		lblProduktPresIco_G.setBounds(148, 251, 134, 107);
+		lblProduktPresIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuakPrestakuntzan(1).png"));
+		contentPane.add(lblProduktPresIco_G);
+		lblProduktPresIco_G.addMouseListener(new MouseAdapter () {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Produktuen prestakuntzan sartu zara.", "SARTU ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				GProdPrestPanela gppp = new GProdPrestPanela();
+				gppp.setVisible(true);
+			}
+		}); 
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setBounds(0, 0, 988, 445);

@@ -48,17 +48,42 @@ public class PrintzipalaGarraioa extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		JButton btnSaioaItxi = new JButton("");
+		btnSaioaItxi.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Saioa itxi nahi duzu?", "SAIOA ITXI", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
+				dispose();
+				
+				Logina log = new Logina();
+				log.setVisible(true);
+				}else {}
+			}
+		});
+		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
+		btnSaioaItxi.setBounds(10, 420, 110, 32);
+		contentPane.add(btnSaioaItxi);
+
 		JLabel lblNewLabel_1_1 = new JLabel("Garraiolaria");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 28));
 		lblNewLabel_1_1.setBounds(812, 419, 166, 32);
 		contentPane.add(lblNewLabel_1_1);
-		
+
 		JButton btnAtera = new JButton("");
 		btnAtera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
-				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				Object[] options = { "Bai", "Ez" };
+				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?",
+						"Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, +JOptionPane.QUESTION_MESSAGE, null,
+						options, options[0]);
+				if (erantzuna == JOptionPane.YES_OPTION) {
+					dispose();
+					JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
+							JOptionPane.INFORMATION_MESSAGE);
+				} else {
+				}
 			}
 		});
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
@@ -66,12 +91,12 @@ public class PrintzipalaGarraioa extends JFrame {
 		btnAtera.setBackground(new Color(255, 51, 51));
 		btnAtera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtera);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("Eskaerak:");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 28));
 		lblNewLabel_1.setBounds(10, 11, 138, 32);
 		contentPane.add(lblNewLabel_1);
-		
+
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\UTech java fondoa 1(2).png"));
 		lblNewLabel.setBackground(new Color(0, 0, 0));
