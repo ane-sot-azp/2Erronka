@@ -7,8 +7,12 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Font;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class BezeroakPanela extends JFrame {
 
@@ -43,6 +47,38 @@ public class BezeroakPanela extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton btnAtzera = new JButton("");
+		btnAtzera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				
+				Printzipala p = new Printzipala();
+				p.setVisible(true);
+			}
+		});
+		
+		JButton btnAtera = new JButton("");
+		btnAtera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?", "Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				}else {}
+			}
+		});
+		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
+		btnAtera.setForeground(Color.WHITE);
+		btnAtera.setBackground(new Color(255, 255, 255));
+		btnAtera.setBounds(956, 0, 32, 32);
+		contentPane.add(btnAtera);
+		btnAtzera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\atzera 2(2).png"));
+		btnAtzera.setBounds(0, 0, 55, 32);
+		contentPane.add(btnAtzera);
 		
 		JLabel lblNewLabel_1 = new JLabel("Administratzailea");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 28));

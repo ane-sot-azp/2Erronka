@@ -49,8 +49,8 @@ public class ProduktuakPanela extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton btnAtzera = new JButton("");
+		btnAtzera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				
@@ -58,9 +58,9 @@ public class ProduktuakPanela extends JFrame {
 				p.setVisible(true);
 			}
 		});
-		btnNewButton.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\atzera 2(2).png"));
-		btnNewButton.setBounds(0, 0, 55, 32);
-		contentPane.add(btnNewButton);
+		btnAtzera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\atzera 2(2).png"));
+		btnAtzera.setBounds(0, 0, 55, 32);
+		contentPane.add(btnAtzera);
 		
 		JButton btnAtera = new JButton("");
 		btnAtera.addActionListener(new ActionListener() {
@@ -77,7 +77,7 @@ public class ProduktuakPanela extends JFrame {
 		});
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
-		btnAtera.setBackground(new Color(255, 51, 51));
+		btnAtera.setBackground(new Color(255, 255, 255));
 		btnAtera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtera);
 		

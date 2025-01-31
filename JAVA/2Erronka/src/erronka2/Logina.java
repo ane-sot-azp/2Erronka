@@ -13,6 +13,7 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -58,6 +59,26 @@ public class Logina extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
+		JButton btnAtera = new JButton("");
+		btnAtera.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Object[] options = {"Bai", "Ez"};
+				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?", "Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, 
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+				if(erantzuna == JOptionPane.YES_OPTION) {
+				dispose();
+				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
+						JOptionPane.INFORMATION_MESSAGE);
+				}else {}
+			}
+		});
+		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
+		btnAtera.setForeground(Color.WHITE);
+		btnAtera.setBackground(new Color(255, 255, 255));
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnAtera.setBounds(946, 0, 32, 32);
+		panel.add(btnAtera);
+		
 		JLabel lblNewLabel = new JLabel("Saioa hasi");
 		lblNewLabel.setBackground(new Color(102, 153, 255));
 		lblNewLabel.setBounds(375, 105, 222, 60);
@@ -78,17 +99,20 @@ public class Logina extends JFrame {
 		panel.add(lblNewLabel_2);
 		
 		txtErabiltzailea = new JTextField();
+		txtErabiltzailea.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
 		txtErabiltzailea.setBounds(315, 196, 358, 35);
 		txtErabiltzailea.setFont(new Font("Tahoma", Font.PLAIN, 29));
 		panel.add(txtErabiltzailea);
 		txtErabiltzailea.setColumns(10);
 		
 		jpassPasahitza = new JPasswordField();
+		jpassPasahitza.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
 		jpassPasahitza.setBounds(315, 265, 358, 35);
 		jpassPasahitza.setFont(new Font("Tahoma", Font.PLAIN, 29));
 		panel.add(jpassPasahitza);
 		
 		JButton btnNewButton = new JButton("Sartu");
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnNewButton.setBounds(449, 352, 91, 23);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -65,7 +66,8 @@ public class PrintzipalaGerentea extends JFrame {
 			}
 		});
 		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
-		btnSaioaItxi.setBounds(10, 420, 110, 32);
+		btnSaioaItxi.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnSaioaItxi.setBounds(0, 423, 110, 32);
 		contentPane.add(btnSaioaItxi);
 		
 		JLabel lblNewLabel_1 = new JLabel("Gerentea");
@@ -74,6 +76,7 @@ public class PrintzipalaGerentea extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblBalorazioakIco_G = new JLabel("New label");
+		lblBalorazioakIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblBalorazioakIco_G.setBounds(771, 52, 134, 107);
 		lblBalorazioakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\balorazioak(1).png"));
 		contentPane.add(lblBalorazioakIco_G);
@@ -81,14 +84,14 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Produktuen balorazioetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GBalorazioakPanela gbalp = new GBalorazioakPanela();
 				gbalp.setVisible(true);
 			}
 		}); 
 		
 		JLabel lblEskHistoIco_G = new JLabel("New label");
+		lblEskHistoIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblEskHistoIco_G.setBounds(683, 251, 134, 107);
 		lblEskHistoIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerenHistorikoa(1).png"));
 		contentPane.add(lblEskHistoIco_G);
@@ -96,14 +99,14 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Eskaera Historikotara sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GEskHistorikoPanela gehp = new GEskHistorikoPanela();
 				gehp.setVisible(true);	
 			}
 		}); 
 		
 		JLabel lblEskaeraIco_G = new JLabel("New label");
+		lblEskaeraIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblEskaeraIco_G.setBounds(593, 52, 134, 107);
 		lblEskaeraIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerak(1).png"));
 		contentPane.add(lblEskaeraIco_G);
@@ -111,14 +114,14 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Eskaeretan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GEskaeraPanela gep = new GEskaeraPanela();
 				gep.setVisible(true);
 			}
 		}); 
 		
 		JLabel lblPiezaEskIco_G = new JLabel("New label");
+		lblPiezaEskIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPiezaEskIco_G.setBounds(513, 251, 134, 107);
 		lblPiezaEskIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezenEskaera(1).png"));
 		contentPane.add(lblPiezaEskIco_G);
@@ -126,14 +129,14 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GPiezaEskPanela gpiep = new GPiezaEskPanela();
 				gpiep.setVisible(true);
 			}
 		}); 
 		
 		JLabel lblPiezakIco_G = new JLabel("New label");
+		lblPiezakIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPiezakIco_G.setBounds(413, 52, 134, 107);
 		lblPiezakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezak(1).png"));
 		contentPane.add(lblPiezakIco_G);
@@ -141,8 +144,7 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GPiezaPanela gpip = new GPiezaPanela();
 				gpip.setVisible(true);
 			}
@@ -161,6 +163,7 @@ public class PrintzipalaGerentea extends JFrame {
 				}else {}
 			}
 		});
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnAtera.setBounds(956, 0, 32, 32);
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
@@ -169,6 +172,7 @@ public class PrintzipalaGerentea extends JFrame {
 		
 		
 		JLabel lblHornitzaileakIco_G = new JLabel("New label");
+		lblHornitzaileakIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblHornitzaileakIco_G.setBounds(328, 251, 134, 107);
 		lblHornitzaileakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\hornitzaileak(1).png"));
 		contentPane.add(lblHornitzaileakIco_G);
@@ -176,14 +180,14 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Hornitzailetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GHornitzailePanela ghp = new GHornitzailePanela();
 				ghp.setVisible(true);
 			}
 		}); 
 		
 		JLabel lblBezeroakIco_G = new JLabel("New label");
+		lblBezeroakIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblBezeroakIco_G.setBounds(239, 52, 134, 107);
 		lblBezeroakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\bezeroak(1).png"));
 		contentPane.add(lblBezeroakIco_G);
@@ -191,29 +195,29 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Bezeroetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GBezeroakPanela gbp = new GBezeroakPanela();
 				gbp.setVisible(true);
 			}
 		}); 
 		
 		JLabel lblProduktuakIco_G = new JLabel("");
+		lblProduktuakIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblProduktuakIco_G.setBounds(61, 52, 134, 108);
 		lblProduktuakIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuak(1).png"));
 		contentPane.add(lblProduktuakIco_G);
 		lblProduktuakIco_G.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				dispose();
 				GProduktuakPanela gpp = new GProduktuakPanela();
 				gpp.setVisible(true);
-				JOptionPane.showMessageDialog(null, "Produktuetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 		});
 		
 		JLabel lblProduktPresIco_G = new JLabel("New label");
+		lblProduktPresIco_G.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblProduktPresIco_G.setBounds(148, 251, 134, 107);
 		lblProduktPresIco_G.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuakPrestakuntzan(1).png"));
 		contentPane.add(lblProduktPresIco_G);
@@ -221,8 +225,7 @@ public class PrintzipalaGerentea extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Produktuen prestakuntzan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				GProdPrestPanela gppp = new GProdPrestPanela();
 				gppp.setVisible(true);
 			}

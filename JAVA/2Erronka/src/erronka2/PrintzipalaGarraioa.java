@@ -63,7 +63,7 @@ public class PrintzipalaGarraioa extends JFrame {
 			}
 		});
 		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
-		btnSaioaItxi.setBounds(10, 420, 110, 32);
+		btnSaioaItxi.setBounds(0, 423, 110, 32);
 		contentPane.add(btnSaioaItxi);
 
 		JLabel lblNewLabel_1_1 = new JLabel("Garraiolaria");

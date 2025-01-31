@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -66,7 +67,8 @@ public class Printzipala extends JFrame {
 			}
 		});
 		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
-		btnSaioaItxi.setBounds(10, 420, 110, 32);
+		btnSaioaItxi.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnSaioaItxi.setBounds(0, 423, 110, 32);
 		contentPane.add(btnSaioaItxi);
 		
 		JLabel lblNewLabel_1 = new JLabel("Administratzailea");
@@ -76,14 +78,13 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblEskHistoIco = new JLabel("New label");
 		lblEskHistoIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerenHistorikoa(1).png"));
+		lblEskHistoIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblEskHistoIco.setBounds(771, 251, 134, 107);
 		contentPane.add(lblEskHistoIco);
 		lblEskHistoIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Eskaera Historikotara sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
 				EskHistorikoPanela ehp = new EskHistorikoPanela();
 				ehp.setVisible(true);
 				
@@ -93,14 +94,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblPiezaEskIco = new JLabel("New label");
 		lblPiezaEskIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezenEskaera(1).png"));
+		lblPiezaEskIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPiezaEskIco.setBounds(593, 251, 134, 107);
 		contentPane.add(lblPiezaEskIco);
 		lblPiezaEskIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				PiezaEskPanela piep = new PiezaEskPanela();
 				piep.setVisible(true);
 			}
@@ -108,14 +109,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblEskaeraIco = new JLabel("New label");
 		lblEskaeraIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\eskaerak(1).png"));
+		lblEskaeraIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblEskaeraIco.setBounds(771, 52, 134, 107);
 		contentPane.add(lblEskaeraIco);
 		lblEskaeraIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Eskaeretan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				EskaeraPanela ep = new EskaeraPanela();
 				ep.setVisible(true);
 			}
@@ -123,14 +124,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblPiezakIco = new JLabel("New label");
 		lblPiezakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\piezak(1).png"));
+		lblPiezakIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblPiezakIco.setBounds(593, 52, 134, 107);
 		contentPane.add(lblPiezakIco);
 		lblPiezakIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Piezen eskaeran sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				PiezaPanela pip = new PiezaPanela();
 				pip.setVisible(true);
 			}
@@ -138,14 +139,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblBalorazioakIco = new JLabel("New label");
 		lblBalorazioakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\balorazioak(1).png"));
+		lblBalorazioakIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblBalorazioakIco.setBounds(413, 251, 134, 107);
 		contentPane.add(lblBalorazioakIco);
 		lblBalorazioakIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Produktuen balorazioetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				BalorazioakPanela balp = new BalorazioakPanela();
 				balp.setVisible(true);
 			}
@@ -153,14 +154,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblBezeroakIco = new JLabel("New label");
 		lblBezeroakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\bezeroak(1).png"));
+		lblBezeroakIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblBezeroakIco.setBounds(239, 251, 134, 107);
 		contentPane.add(lblBezeroakIco);
 		lblBezeroakIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Bezeroetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				BezeroakPanela bp = new BezeroakPanela();
 				bp.setVisible(true);
 			}
@@ -168,14 +169,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblProduktPresIco = new JLabel("New label");
 		lblProduktPresIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuakPrestakuntzan(1).png"));
+		lblProduktPresIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblProduktPresIco.setBounds(61, 251, 134, 107);
 		contentPane.add(lblProduktPresIco);
 		lblProduktPresIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Produktuen prestakuntzan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				ProdPrestPanela ppp = new ProdPrestPanela();
 				ppp.setVisible(true);
 			}
@@ -195,36 +196,38 @@ public class Printzipala extends JFrame {
 			}
 		});
 		btnAtera.setForeground(new Color(255, 255, 255));
-		btnAtera.setBackground(new Color(255, 51, 51));
+		btnAtera.setBackground(new Color(255, 255, 255));
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtera);
 		
 		JLabel lblProduktuakIco = new JLabel("");
 		lblProduktuakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\produktuak(1).png"));
+		lblProduktuakIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblProduktuakIco.setBounds(61, 52, 134, 108);
 		contentPane.add(lblProduktuakIco);
 		lblProduktuakIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				dispose();
+				
 				ProduktuakPanela pp = new ProduktuakPanela();
 				pp.setVisible(true);
-				JOptionPane.showMessageDialog(null, "Produktuetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
 			}
 			
 		});
 		
 		JLabel lblLangileakIco = new JLabel("New label");
 		lblLangileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\langileak(1).png"));
+		lblLangileakIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblLangileakIco.setBounds(239, 52, 134, 107);
 		contentPane.add(lblLangileakIco);
 		lblLangileakIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Langileetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				LangileakPanela lp = new LangileakPanela();
 				lp.setVisible(true);
 			}
@@ -233,14 +236,14 @@ public class Printzipala extends JFrame {
 		
 		JLabel lblHornitzaileakIco = new JLabel("New label");
 		lblHornitzaileakIco.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\hornitzaileak(1).png"));
+		lblHornitzaileakIco.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		lblHornitzaileakIco.setBounds(413, 52, 134, 107);
 		contentPane.add(lblHornitzaileakIco);
 		lblHornitzaileakIco.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				dispose();
-				JOptionPane.showMessageDialog(null, "Hornitzailetan sartu zara.", "SARTU ZARA",
-						JOptionPane.INFORMATION_MESSAGE);
+				
 				HornitzailePanela hp = new HornitzailePanela();
 				hp.setVisible(true);
 			}
