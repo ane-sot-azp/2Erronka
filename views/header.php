@@ -3,7 +3,7 @@
     <div class="sticky">
         <div class="navbar">
             <div class="header">
-                <a class="logoa" href="hasiera.php"><img class="logo" src="../Web orria CSS frogak/irudiak/IKONOAK/LOGO.svg"
+                <a class="logoa" href="hasiera.php"><img class="logo" src="../public/irudiak/IKONOAK/LOGO.svg"
                         alt="Logoa" class="center"></a>
             </div>
             <div class="bilatu">
@@ -17,7 +17,8 @@
             <div id="left">
                 <a class="left" href="hasiera.php">Hasiera</a>
                 <a class="left" href="norGara.php">Nor gara</a>
-                <div class="subnav left">
+                <a class="left" href="katalogoa.php">Katalogoa</a>
+                <!-- <div class="subnav left">
                     <button class="subnavbtn">Katalogoa <i class="fa fa-caret-down"></i></button>
                     <div class="subnav-content">
                         <a href="katalogoa.php"><b>Produktu guztiak |</b></a>
@@ -26,7 +27,7 @@
                         <a href="katalogoaMonitoreak.php">Monitoreak</a>
                         <a href="katalogoaAurikularrak.php">Aurikularrak</a>
                     </div>
-                </div>
+                </div> -->
                 <!-- <a class="left" href="prodSaldu.php">Zure produktuak saldu</a> -->
                 <a class="left" href="kontaktua.php">Kontaktua</a>
                 
@@ -34,7 +35,7 @@
             <div id="right">
             <a class="right" href="#saskia"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a class="right" href="login.php"><i class="fa-solid fa-user"></i></a>
-                <a class="hizkuntza hiz right" href="hasiera_EN.php"><img src="irudiak/IKONOAK/uk.png"></a>
+                <a class="hizkuntza hiz right" href="hasiera_EN.php"><img src="../public/irudiak/IKONOAK/uk.png"></a>
             </div>
         </div>
     </div>

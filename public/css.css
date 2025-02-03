@@ -689,7 +689,7 @@ div.general {
   gap: 1%;
   border-radius: 10px;
   margin: 2%;
-  height: max-content;
+  /*height: max-content;*/
 }
 /* div.general > div > p {
   font-size: 16px;
@@ -701,18 +701,17 @@ div.general {
 .produktuakKat{
   grid-area: produktuak;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content; /* Las filas tendrán solo la altura necesaria */
   gap: 1%;
   border-radius: 5px;
   margin: 2%;
-  position: relative;
-  min-height: 450px;
 }
 
 .produktuaKat {
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   justify-items: center;
   border-radius: 10px;
   text-align: center;

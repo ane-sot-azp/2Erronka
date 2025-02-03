@@ -6,7 +6,7 @@
     if (isset($_GET['produktuid'])) {
         $idProduktua = $_GET['produktuid'];
     }
-    require_once 'db.php';
+    require_once '../src/db.php';
     $conn = konexioaEgin();
     $sql = "SELECT marka, modeloa FROM produktua WHERE idProduktua=$idProduktua";
     $result = $conn->query($sql);
@@ -19,10 +19,10 @@
     ?>
     <meta charset="utf-8">
     <title>Utech | <?php echo $marka . ' ' . $modeloa ?></title>
-    <link rel="icon" href="irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
     <script src="https://kit.fontawesome.com/83f15f6aab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../public/css.css">
     </link>
 </head>
 
@@ -38,9 +38,9 @@
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo '<div class="produktuaIrudia" id="produktuairudia' . $row['idProduktua'] . '" data-alternate-image="irudiak/PRODUKTUAK/' . $row['irudia2'] . '">';
+                echo '<div class="produktuaIrudia" id="produktuairudia' . $row['idProduktua'] . '" data-alternate-image="../public/irudiak/PRODUKTUAK/' . $row['irudia2'] . '">';
                 echo '<a href="produktua.php?produktuid=' . $row['idProduktua'] . '" class="prodaIrudiak">';
-                echo '<img width="40%" id="argazkia" src="irudiak/PRODUKTUAK/' . $row['irudia1'] . '" alt="Irudia ' . $row['idProduktua'] . '">';
+                echo '<img width="40%" id="argazkia" src="../public/irudiak/PRODUKTUAK/' . $row['irudia1'] . '" alt="Irudia ' . $row['idProduktua'] . '">';
                 echo '</a>';
                 echo '</div>';
                 echo '<div class="produktuaInfo" id="produktuainfo' . $row['idProduktua'] . '">';

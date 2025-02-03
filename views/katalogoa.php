@@ -7,14 +7,14 @@
     <link rel="icon" href="irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
     <script src="https://kit.fontawesome.com/83f15f6aab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../public/css.css">
     </linkrel>
 </head>
 
 <body>
     <?php include 'header.php'; ?>
     <?php
-    require_once 'db.php';
+    require_once '../src/db.php';
     $conn = konexioaEgin();
     ?>
     <div class="general">
@@ -145,7 +145,7 @@
             </ul>
         </div>
         <div class="produktuakKat">
-        
+
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -171,7 +171,7 @@
                     };
 
                     $.ajax({
-                        url: 'filtroa.php',
+                        url: '../src/filtroa.php',
                         method: 'GET',
                         data: filtroak,
                         success: function (informazioa) {
@@ -193,7 +193,7 @@
                             edukia += `
                     <div class="produktuaKat" id="produktua${produktua.idProduktua}">
                         <a href="produktua.php?produktuid=${produktua.idProduktua}" class="prodIrudiak">
-                            <img id="argazkia" src="irudiak/PRODUKTUAK/${produktua.irudia1}" alt="Irudia ${produktua.idProduktua}">
+                            <img id="argazkia" src="../public/irudiak/PRODUKTUAK/${produktua.irudia1}" alt="Irudia ${produktua.idProduktua}">
                         </a>
                         <p><b>Marka:</b> ${produktua.marka}</p><br>
                         <p style="height:40px"><b>Modeloa:</b> ${produktua.modeloa}</p>
@@ -216,7 +216,7 @@
 
                 // Ejecutar el filtrado inicial
                 produktuakFiltratu();
-                
+
             });
         </script>
 

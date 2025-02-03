@@ -4,22 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>UTech</title>
-    <link rel="icon" href="irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
     <script src="https://kit.fontawesome.com/83f15f6aab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="../public/css.css" />
 </head>
 
 <body>
     <?php include 'header.php'; ?>
-    <img class="deskontuak" src="irudiak\DESKONTUAK\Deskontuak.png" alt="deskontuak">
+    <img class="deskontuak" src="../public/irudiak\DESKONTUAK\Deskontuak.png" alt="deskontuak">
     <div class="produktuak">
         <h1>Azken produktuak</h1>
     </div>
         <div class="imagenes">
             <?php
 
-            require_once 'db.php';
+            require_once '../src/db.php';
             $conn = konexioaEgin();
 
             $id1 = mt_rand(1,10);
@@ -34,7 +34,7 @@
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="imagen" id="imagen' . $row['idProduktua'] . '">';
                     echo '<a href="produktua.php?produktuid=' .$row['idProduktua'] .'" class="irudiak">';
-                    echo '<img src="irudiak/PRODUKTUAK/' . $row['irudia1'] . '" alt="Imagen ' . $row['idProduktua'] . '">';
+                    echo '<img src="../public/irudiak/PRODUKTUAK/' . $row['irudia1'] . '" alt="Imagen ' . $row['idProduktua'] . '">';
                     echo '</a>';
                     echo '<p class="deskribapena">' . $row['marka'] . ' ' . $row['modeloa'] . '</p>';
                     echo '</div>';
@@ -52,7 +52,7 @@
     <div class="albiste">
         <div class="albisteak1">
             <div class="albisteIrudia">
-                <img src="irudiak/ALBISTEAK/20241023124623_adimen-artifiziala-dls-zu_amp_w1200.jpg" width="100%">
+                <img src="../public/irudiak/ALBISTEAK/20241023124623_adimen-artifiziala-dls-zu_amp_w1200.jpg" width="100%">
             </div>
             <div class="izenburua">
                 <h2>EAEko entitateen % 12k darabilte Adimen Artifiziala, Euskadin hasiberria den arloa</h2>
@@ -86,7 +86,7 @@
         </div>
         <div class="albisteak2">
             <div class="albisteIrudia">
-                <img src="irudiak/ALBISTEAK/20241018105413_urko-esnaola_foto610x342.jpg" width="100%">
+                <img src="../public/irudiak/ALBISTEAK/20241018105413_urko-esnaola_foto610x342.jpg" width="100%">
             </div>
             <div class="izenburua">
                 <h2>Urko Esnaola, Tecnalia: "Robotak edonork programatzea, hori da erronka nagusia"</h2>

@@ -1,5 +1,5 @@
 <?php
-require_once("db.php");
+require_once("../src/db.php");
 $conn = konexioaEgin();
 
 // Obtener todos los parámetros del formulario
@@ -39,6 +39,8 @@ if (!empty($prezioa)) {
         $sql .= " AND salmentaPrezioa BETWEEN '$min' AND '$max'";
     }
 }
+
+// $sql .= " LIMIT 27";
 
 $result = $conn->query($sql);
 

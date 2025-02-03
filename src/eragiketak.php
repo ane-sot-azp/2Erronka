@@ -1,6 +1,6 @@
 <?php
 
-require_once("db.php");
+require_once("../src/db.php");
 
 if (isset($_POST["akzioa"]) && $_POST["akzioa"] == "loginaEgin") {
     $conn = konexioaEgin();

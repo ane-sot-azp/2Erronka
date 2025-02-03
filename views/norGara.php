@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <title>Utech | Nor gara</title>
-    <link rel="icon" href="irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
     <script src="https://kit.fontawesome.com/83f15f6aab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="../public/css.css">
     </linkrel>
 </head>
 
@@ -35,7 +35,7 @@
     </div>
     <div class="norGara">
         <div class="hisIrudia">
-            <img class="norGaraIrudiak" src="irudiak/NOR GARA/LOKALA.png">
+            <img class="norGaraIrudiak" src="../public/irudiak/NOR GARA/LOKALA.png">
         </div>
         <div class="historiaIzenb">
             <h2 class="historia">Historia</h2>
@@ -66,7 +66,7 @@
             </p>
         </div>
         <div class="helIrudia">
-            <img class="norGaraIrudiak" src="irudiak/NOR GARA/HELBURUAK.png" width="80%">
+            <img class="norGaraIrudiak" src="../public/irudiak/NOR GARA/HELBURUAK.png" width="80%">
         </div>
         <div class="helburuakIzenb">
             <h2 class="helburuak">Helburuak</h2>

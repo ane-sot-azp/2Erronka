@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8">
     <title>UTech | Login</title>
-    <link rel="icon" href="irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
-    <link rel="icon" href="irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_dark.svg" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="../public/irudiak/IKONOAK/favicon_light.svg" media="(prefers-color-scheme: light)">
     <script src="https://kit.fontawesome.com/83f15f6aab.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="../public/css.css" />
 </head>
 
 <body>
     <div class="login" id="login">
         <div id="saioHasiera">
-        <img src="irudiak/IKONOAK/LOGO.svg" width="40%"/><br><br><br><br><br><br>
+        <img src="../public/irudiak/IKONOAK/LOGO.svg" width="40%"/><br><br><br><br><br><br>
             <h3 class="">Saioa Hasi</h3><br><br>            
             <form method="POST" action="">
                 <label for="erabiltzailea">Erabiltzailea:<span class="required"><span class="required">*</span></span></label><br>
@@ -69,7 +69,7 @@
             var erabiltzailea = $('#erabiltzailea').val();
             var pasahitza = $('#pasahitza').val();
             $.ajax({
-                url: "eragiketak.php",
+                url: "../src/eragiketak.php",
                 method: "POST",
                 data: {
                     akzioa: "loginaEgin",
@@ -108,7 +108,7 @@
             var pasahitza2 = $('#pasahitza2').val();
 
             $.ajax({
-                url: "eragiketak.php",
+                url: "../src/eragiketak.php",
                 method: "POST",
                 data: {
                     akzioa: "erregistroaEgin",
