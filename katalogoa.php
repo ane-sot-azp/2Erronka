@@ -145,29 +145,7 @@
             </ul>
         </div>
         <div class="produktuakKat">
-            <?php
-
-            $sql = "SELECT idProduktua, irudia1, marka, modeloa, salmentaPrezioa FROM produktua";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo '<div class="produktuaKat" id="produktua' . $row['idProduktua'] . '">';
-                    echo '<a href="produktua.php?produktuid=' . $row['idProduktua'] . '" class="prodIrudiak">';
-                    echo '<img id="argazkia" src="irudiak/PRODUKTUAK/' . $row['irudia1'] . '" alt="Irudia ' . $row['idProduktua'] . '">';
-                    echo '</a>';
-                    echo '<p><b>Marka:</b> ' . $row['marka'] . '</p><br>';
-                    echo '<p style="height:40px"><b>Modeloa:</b> ' . $row['modeloa'] . '</p>';
-                    echo '<p><b>Prezioa:</b> ' . $row['salmentaPrezioa'] . '€</p><br>';
-                    echo '<a class="saskira" href=""><i class="fa-solid fa-cart-plus"></i></a>';
-                    echo '</div>';
-                }
-            } else {
-                echo "Ez da produkturik aurkitu";
-            }
-
-            $conn->close();
-            ?>
+        
         </div>
         <script src="https://code.jquery.com/jquery-3.7.1.js"
             integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
