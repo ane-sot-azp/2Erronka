@@ -161,7 +161,7 @@ public class Produktua {
 							int idmota = erantzuna.getInt("idmota");
 							String marka = erantzuna.getString("marka");
 							String modeloa = erantzuna.getString("modeloa");
-							String ezaugarriak = erantzuna.getString("ezaugarriak");
+							//String ezaugarriak = erantzuna.getString("ezaugarriak");
 							double salmentaPrezioa = erantzuna.getDouble("salmentaPrezioa");
 							int stocka = erantzuna.getInt("stocka");
 

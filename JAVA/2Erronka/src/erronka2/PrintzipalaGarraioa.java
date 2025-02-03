@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Cursor;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
@@ -63,6 +65,7 @@ public class PrintzipalaGarraioa extends JFrame {
 			}
 		});
 		btnSaioaItxi.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\saioaItxi(1).png"));
+		btnSaioaItxi.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnSaioaItxi.setBounds(0, 423, 110, 32);
 		contentPane.add(btnSaioaItxi);
 
@@ -88,7 +91,8 @@ public class PrintzipalaGarraioa extends JFrame {
 		});
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
-		btnAtera.setBackground(new Color(255, 51, 51));
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnAtera.setBackground(new Color(255, 255, 255));
 		btnAtera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtera);
 

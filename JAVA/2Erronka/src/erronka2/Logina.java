@@ -62,20 +62,20 @@ public class Logina extends JFrame {
 		JButton btnAtera = new JButton("");
 		btnAtera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Object[] options = {"Bai", "Ez"};
-				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?", "Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, 
-						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-				if(erantzuna == JOptionPane.YES_OPTION) {
+				Object[] options = {"Bai", "Ez"}; //Bai edo ez izateko aukerak ematen ditu
+				int erantzuna = JOptionPane.showOptionDialog(null, "Programatik atera nahi duzu?", "Konfirmatu atera nahi duzun", JOptionPane.YES_NO_OPTION, //Yes no optionekin, konfirmatzeko edo kantzelatzeko aukerak ematen ditu
+						+ JOptionPane.QUESTION_MESSAGE, null, options, options[0]);//optionsetik arrayak hartzen ditu eta horrela euskeraz azaldu dezan
+				if(erantzuna == JOptionPane.YES_OPTION) { //Erantzuna baiezkoa bada lehioa ixten du, eta atera egin zarela adierazten du
 				dispose();
 				JOptionPane.showMessageDialog(null, "Eskerrik asko aplikazioa erabiltzeagatik.", "ATERA ZARA",
 						JOptionPane.INFORMATION_MESSAGE);
-				}else {}
+				}else {}//Ezezkoa esaten badiozu ez du itxiko
 			}
 		});
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
 		btnAtera.setBackground(new Color(255, 255, 255));
-		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)); //Honen gainean dagoenean eskuan bihurtzen da kursorea(HAND_CURSOR)
 		btnAtera.setBounds(946, 0, 32, 32);
 		panel.add(btnAtera);
 		
@@ -99,7 +99,7 @@ public class Logina extends JFrame {
 		panel.add(lblNewLabel_2);
 		
 		txtErabiltzailea = new JTextField();
-		txtErabiltzailea.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
+		txtErabiltzailea.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));//Honen gainean dagoenean idazteko kursorean bihurtzen da. (TEXT_CURSOR)
 		txtErabiltzailea.setBounds(315, 196, 358, 35);
 		txtErabiltzailea.setFont(new Font("Tahoma", Font.PLAIN, 29));
 		panel.add(txtErabiltzailea);
@@ -117,16 +117,28 @@ public class Logina extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				char[] pasahitza = jpassPasahitza.getPassword();
-				String pasahitzaFinala = new String (pasahitza);
+				char[] pasahitza = jpassPasahitza.getPassword();//jpassPasahitzan sartzen den balorea pasahitza arrayan gordetzen da
+				String pasahitzaFinala = new String (pasahitza);//pasahitza finalan gordetzen da arraya string baten bihurtuz
+				String erabiltzailea =txtErabiltzailea.getText();
+				
+				LoginaMetodok konprobazioa = new LoginaMetodok();
+				
+				Langilea langilea2 = new Langilea();
+				langilea2.setErabiltzaileIzena(erabiltzailea);
+				langilea2.setPasahitza(pasahitzaFinala);
+				
+				Langilea lan = konprobazioa.lortuErabiltzailea(langilea2);
+				
+				if(lan!=null) {
+		
 				//ADMINAREN MENUAN SARTZEKO
-				if(txtErabiltzailea.getText().equals("Admin") && pasahitzaFinala.equals("utopi")) {
-					dispose();
+				if(erabiltzailea.equals("Admin") && pasahitzaFinala.equals("utopi")) {
+					dispose(); //lehioa ixten du
 					JOptionPane.showMessageDialog(null, "Ongi etorri Utopia System administratzailearen programara", "SARTU ZARA",
-							JOptionPane.INFORMATION_MESSAGE);
+							JOptionPane.INFORMATION_MESSAGE); //Panel bat irekitzen du sartu zarela adierazten
 					
-					Printzipala p = new Printzipala();
-					p.setVisible(true);
+					Printzipala p = new Printzipala(); //Printzipala interfaza definitzen du
+					p.setVisible(true); // Printzipala interfazan sartzen du, bisiblea eginez
 				}//GARRAIOAREN MENUAN SARTZEKO
 				else if(txtErabiltzailea.getText().equals("Garraio") && pasahitzaFinala.equals("utopi")) {
 					dispose();
@@ -134,7 +146,7 @@ public class Logina extends JFrame {
 							JOptionPane.INFORMATION_MESSAGE);
 					
 					PrintzipalaGarraioa pg = new PrintzipalaGarraioa();
-					pg.setVisible(true);
+					pg.setVisible(true); // Garraioen printzipalan sartzen du
 				}//GERENTEAREN MENUAN SARTZEKO
 				else if(txtErabiltzailea.getText().equals("Gerente") && pasahitzaFinala.equals("utopi")) {
 					dispose();
@@ -142,7 +154,7 @@ public class Logina extends JFrame {
 							JOptionPane.INFORMATION_MESSAGE);
 					
 					PrintzipalaGerentea pgr = new PrintzipalaGerentea();
-					pgr.setVisible(true);
+					pgr.setVisible(true); //Gerentearen printzipalan sartzen du
 				}//LANGILEAREN MENUAN SARTZEKO
 				else if(txtErabiltzailea.getText().equals("Langile") && pasahitzaFinala.equals("utopi")) {
 					dispose();
@@ -150,15 +162,19 @@ public class Logina extends JFrame {
 							JOptionPane.INFORMATION_MESSAGE);
 					
 					PrintzipalaLangilea pla = new PrintzipalaLangilea();
-					pla.setVisible(true);
+					pla.setVisible(true);//Langilearen printzipalan sartzen du, bisiblea eginez.
 				
 				}else {
 					JOptionPane.showMessageDialog(null, "Erabiltzailea edo pasahitza ez dira zuzenak", "ERROREA!",
-							JOptionPane.ERROR_MESSAGE);
-					txtErabiltzailea.setText("");
-					jpassPasahitza.setText("");
-					txtErabiltzailea.requestFocus();
+							JOptionPane.ERROR_MESSAGE);//ERROR_MESSAGE-arekin erabiltzailea edo pasahitza zuzenak ez badira mezu bat bidaltzen du
+					txtErabiltzailea.setText("");//Erabiltzailean idatzitakoa borratzeko
+					jpassPasahitza.setText("");//Pasahitzan idatzitakoa borratzeko
+					txtErabiltzailea.requestFocus();//Erabiltzailearen text arean sartzen da direktamente
 				}
+			}else {
+				JOptionPane.showMessageDialog(null, "Konexioa ez da ondo egin!", "ERROREA!",
+						JOptionPane.ERROR_MESSAGE);
+			}
 			}
 		});
 		btnNewButton.setForeground(new Color(0, 0, 0));

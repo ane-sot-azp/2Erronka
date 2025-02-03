@@ -87,7 +87,8 @@ public class PrintzipalaLangilea extends JFrame {
 		contentPane.add(btnSaioaItxi);
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
-		btnAtera.setBackground(new Color(255, 51, 51));
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnAtera.setBackground(new Color(255, 255, 255));
 		btnAtera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtera);
 		
@@ -179,6 +180,7 @@ public class PrintzipalaLangilea extends JFrame {
 		lblProduktuakIco_L.addMouseListener(new MouseAdapter () {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				dispose();
 				LProduktuakPanela lpp = new LProduktuakPanela();
 				lpp.setVisible(true);
 				

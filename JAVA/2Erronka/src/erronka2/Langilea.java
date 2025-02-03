@@ -19,21 +19,18 @@ public class Langilea {
 	private String abizena;
 	private String telefonoa;
 	private String email;
-	private String erabiltzailea;
+	private String erabiltzaileIzena;
 	private String pasahitza;
 	private String helbidea;
 	private String postakodea;
 	
-	private static final String URL = "jdbc:mysql://172.16.242.107:3306/1.erronka";
-	private static final String ERABILTZAILEA = "administratzailea";
-	private static final String PASAHITZA = "1erronka";
 
 	// SORTZAILEAK(CONSTRUCTORES)
 	public Langilea() {
 	}
 
 	public Langilea(int idLangilea, int idLanpostua, String lanpostua, String nan, String izena, String abizena, String telefonoa, String email,
-			String erabiltzailea, String pasahitza, String helbidea, String postakodea) {
+			String erabiltzaileIzena, String pasahitza, String helbidea, String postakodea) {
 		super();
 		this.idLangilea = idLangilea;
 		this.idLanpostua = idLanpostua;
@@ -43,7 +40,7 @@ public class Langilea {
 		this.abizena = abizena;
 		this.telefonoa = telefonoa;
 		this.email = email;
-		this.erabiltzailea = erabiltzailea;
+		this.erabiltzaileIzena = erabiltzaileIzena;
 		this.pasahitza = pasahitza;
 		this.helbidea = helbidea;
 		this.postakodea = postakodea;
@@ -114,12 +111,12 @@ public class Langilea {
 		this.email = email;
 	}
 
-	public String getErabiltzailea() {
-		return erabiltzailea;
+	public String getErabiltzaileIzena() {
+		return erabiltzaileIzena;
 	}
 
-	public void setErabiltzailea(String erabiltzailea) {
-		this.erabiltzailea = erabiltzailea;
+	public void setErabiltzaileIzena(String erabiltzaileIzena) {
+		this.erabiltzaileIzena = erabiltzaileIzena;
 	}
 
 	public String getPasahitza() {
@@ -145,12 +142,13 @@ public class Langilea {
 	public void setPostakodea(String postakodea) {
 		this.postakodea = postakodea;
 	}
+	
 
 	// TO STRING
 	@Override
 	public String toString() {
 		return "Langileak [id=" + idLangilea + ", idLanpostua=" + idLanpostua + ", lanpostua=\" + lanpostua + \", nan=" + nan + ", izena=" + izena + ", abizena="
-				+ abizena + ", telefonoa=" + telefonoa + ", email=" + email + ", erabiltzailea=" + erabiltzailea
+				+ abizena + ", telefonoa=" + telefonoa + ", email=" + email + ", erabiltzaileIzena=" + erabiltzaileIzena
 				+ ", pasahitza=" + pasahitza + ", helbidea=" + helbidea + ", postakodea=" + postakodea + "]";
 	}
 
@@ -158,7 +156,7 @@ public class Langilea {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(abizena, email, erabiltzailea, helbidea, idLangilea, idLanpostua, izena, lanpostua, nan, pasahitza,
+		return Objects.hash(abizena, email, erabiltzaileIzena, helbidea, idLangilea, idLanpostua, izena, lanpostua, nan, pasahitza,
 				postakodea, telefonoa);
 	}
 
@@ -172,7 +170,7 @@ public class Langilea {
 			return false;
 		Langilea other = (Langilea) obj;
 		return Objects.equals(abizena, other.abizena) && Objects.equals(email, other.email)
-				&& Objects.equals(erabiltzailea, other.erabiltzailea) && Objects.equals(helbidea, other.helbidea)
+				&& Objects.equals(erabiltzaileIzena, other.erabiltzaileIzena) && Objects.equals(helbidea, other.helbidea)
 				&& idLangilea == other.idLangilea && idLanpostua == other.idLanpostua && Objects.equals(izena, other.izena)
 				&& Objects.equals(lanpostua, other.lanpostua) && Objects.equals(nan, other.nan)
 				&& Objects.equals(pasahitza, other.pasahitza) && Objects.equals(postakodea, other.postakodea)
@@ -187,10 +185,12 @@ public class Langilea {
 		int offset = 0;
 		boolean jarraitu = true;
 		Scanner sc = new Scanner(System.in);
-
-		try (Connection konexioa = DriverManager.getConnection(URL, ERABILTZAILEA, PASAHITZA)) {
+		DBKonexioa db = new DBKonexioa();
+		
+		
+		try (Connection conn=db.konexioaEgin()) {
 			while (jarraitu) {
-				try (PreparedStatement deklarazioa = konexioa.prepareStatement(kontsulta)) {
+				try (PreparedStatement deklarazioa = conn.prepareStatement(kontsulta)) {
 					deklarazioa.setInt(1, limit);
 					deklarazioa.setInt(2, offset);
 
@@ -209,7 +209,7 @@ public class Langilea {
 							String abizena = erantzuna.getString("abizena");
 							String telefonoa = erantzuna.getString("telefonozenbakia");
 							String email = erantzuna.getString("postaelektronikoa");
-							String erabiltzaileizena = erantzuna.getString("erabiltzaileizena");
+							String erabiltzaileIzena = erantzuna.getString("erabiltzaileIzena");
 							String pasahitza = erantzuna.getString("pasahitza");
 							String helbidea = erantzuna.getString("helbidea");
 							String postakodea = erantzuna.getString("postakodea");
@@ -217,7 +217,7 @@ public class Langilea {
 							
 							System.out.println("IdLangilea: " + idLangilea + "| IdLanpostua: " + idlanpostua + "| Lanpostua: " + lanpostua + "| NAN-a: " + nan + "| Izena: " + izena + "| Abizena: "
 									+ abizena + "| Telefonoa: " + telefonoa + "| Posta elektronikoa: " + email
-									+ "| Erabiltzaile izena: " + erabiltzaileizena	+ "| Pasahitza: " + pasahitza +"| Helbidea: " + helbidea + "| Posta kodea: " + postakodea );
+									+ "| Erabiltzaile izena: " + erabiltzaileIzena	+ "| Pasahitza: " + pasahitza +"| Helbidea: " + helbidea + "| Posta kodea: " + postakodea );
 						}
 					}
 				}
@@ -244,5 +244,7 @@ public class Langilea {
 	public void langileaEzabatu() {
 		
 	}
+
+
 
 }

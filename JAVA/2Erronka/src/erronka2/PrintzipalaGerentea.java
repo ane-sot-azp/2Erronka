@@ -167,7 +167,7 @@ public class PrintzipalaGerentea extends JFrame {
 		btnAtera.setBounds(956, 0, 32, 32);
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
-		btnAtera.setBackground(new Color(255, 51, 51));
+		btnAtera.setBackground(new Color(255, 255, 255));
 		contentPane.add(btnAtera);
 		
 		

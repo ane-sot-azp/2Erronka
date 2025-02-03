@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Cursor;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
@@ -74,9 +76,11 @@ public class BezeroakPanela extends JFrame {
 		btnAtera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\itxi(2).png"));
 		btnAtera.setForeground(Color.WHITE);
 		btnAtera.setBackground(new Color(255, 255, 255));
+		btnAtera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnAtera.setBounds(956, 0, 32, 32);
 		contentPane.add(btnAtera);
 		btnAtzera.setIcon(new ImageIcon("C:\\Users\\benat\\Downloads\\atzera 2(2).png"));
+		btnAtzera.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnAtzera.setBounds(0, 0, 55, 32);
 		contentPane.add(btnAtzera);
 		
